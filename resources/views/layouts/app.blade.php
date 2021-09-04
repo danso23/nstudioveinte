@@ -30,8 +30,8 @@
     <div id="app">
        <!-- HEADER -->
         <div class="col-12 text-center barra-top m-0">
-            <h3>Descuentos hasta un 30% <br class="d-block d-sm-block d-md-none d-lg-none">
-            <span>Consultas las bases <a href="#">aquí</a> </span></h3>
+            <h3 class="textos-grises">Descuentos hasta un 30% <br class="d-block d-sm-block d-md-none d-lg-none">
+            <span>Consultas las bases <a href="#" class="textos-cafes">aquí</a> </span></h3>
         </div>
         <div class="container info-nav">
             <div class="row mrl-q">
@@ -91,13 +91,27 @@
         </main>
         <!--footer-->
         <footer class="site-footer">
-            <div class="container p-0 content-f1">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center text.sm-center text-md-right text-lg-right content-footer-logo">
+        <div class="container">
+            <div class="row align-items-start text-center" style="justify-content:center;">
+                <div class="col-8 text-center">
                     <a href=""><img src="{{ asset('img/logo.svg') }}" alt="index.php" class="img-fluid" ></a>
-                    
+                    <p class="textos-cafes">Boutique dedicada a la venta de ropa de mujer,  donde el diseño y la tendencia tienen un espacio. </p>
                 </div>
-                <p class="textos-cafes">Boutique dedicada a la venta de ropa de mujer,  donde el diseño y la tendencia tienen un espacio. </p>
             </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-start text-center">
+                <div class="col text-center">
+                    <a href="https://www.facebook.com/nstudioveinte.mx/"><img src="{{ asset('icons/iconofacebook.svg') }}" alt="index.php" class="img-icons" ></a>
+                    <a href="https://instagram.com/nstudioveinte.mx?utm_medium=copy_link"><img src="{{ asset('icons/iconoinstagram.svg') }}" alt="index.php" class="img-icons" ></a>
+                </div>
+                <div class="col text-center">
+                <a href=""><img src="{{ asset('icons/iconoxxopay.svg') }}" alt="index.php" class="img-icons" ></a>
+                    <a href=""><img src="{{ asset('icons/iconovisa.svg') }}" alt="index.php" class="img-icons" ></a>
+                    <a href=""><img src="{{ asset('icons/iconomastercard.svg') }}" alt="index.php" class="img-icons" ></a>
+                </div><br><br><br>
+            </div>
+        </div>
             <div class="col-12 text-center copyright">
                 <ul class="m-0">
                     <li class="textos-grises">&copy; 2021 Desarrollo por...</li>

@@ -18,15 +18,14 @@ class PaymentController extends Controller
         return view('payment.payment');
     }
 
-    public function paymentIntent(){
+    /** OXXO PAY **/
+    public function paymentIntent(Request $request){
         $stripe = Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $intent = \Stripe\PaymentIntent::create([
-            "amount" => 1099,
+            "amount" => 40000,
             "currency" => "mxn",
             "payment_method_types" => ["oxxo"]
         ]);
-        //print_r($intent);exit;
-        //return view('payment.paymentIntent')->with("intent", $intent->client_secret);
         return response()->json(["intent" => $intent]);
     }
 
