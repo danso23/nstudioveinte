@@ -1374,6 +1374,19 @@ ul.menu-details li a.activo::after{
   color: white;
   border-radius: 40px;
 }
+
+.btn-cafe{
+  background-color: #B97232 !important;
+  color: white;
+  border: #B97232 !important;
+  border-radius: 40px;
+}
+
+.img-icons {
+  max-width: 8%;
+  height: auto;
+}
+
 /* end description */
 .card {padding: 0;}
 .card-body {padding: 1.25rem 1.25rem 1.25rem 1.25rem;}

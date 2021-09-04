@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="">
-                    <h2>Completa los campos para procesar tu pago</h2>
+                    <h2 class="textos-cafes">Completa los campos para procesar tu pago</h2>
                     <br>
                 </div>
             </div>
@@ -41,16 +41,16 @@
             <div class="col-lg-12">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="rdPayment" id="rdCard">
-                    <label class="form-check-label" for="rdCard">
+                    <label class="form-check-label textos-grises" for="rdCard">
                         Tarjeta debito /crédito
                     </label>
                     </div>
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="rdPayment" id="rdOxxo">
-                    <label class="form-check-label" for="rdOxxo">
+                    <label class="form-check-label textos-grises" for="rdOxxo">
                         OXXO Pago
-                    </label>
-                </div>
+                    </label><br>
+                </div><br><br>
                 <!-- FORM tarjeta -->
                 <form  action="{{ route('processPayment') }}" id="frmPaymentCard" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" name="frmStripe" id="frmstripe" method="post" style="display:none;">
                     @csrf
@@ -60,40 +60,40 @@
                     <input type="hidden" name="cp" value="{{$datos['cp']}}">
                     <div class="row">
                         <div class="col-lg-12 form-group">
-                            <label>Nombre del titular</label>
+                            <label class="textos-cafes">Nombre del titular</label>
                             <input class="form-control" type="text" name="cardholder" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12 form-group">
-                            <label>Número de la tarjeta</label>
+                            <label class="textos-cafes">Número de la tarjeta</label>
                             <input autocomplete="off" class="form-control solonumeros" size="16" minlength="16" maxlength="16" type="text" name="card_no" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 form-group">
-                            <label>CVC</label>
+                            <label class="textos-cafes">CVC</label>
                             <input autocomplete="off" class="form-control solonumeros" placeholder="ex. 311" size="3" type="text" name="cvv" maxlength="3" required>
                         </div>
                         <div class="col-lg-4 form-group">
-                            <label>Mes</label>
+                            <label class="textos-cafes">Mes</label>
                             <input class="form-control solonumeros" placeholder="MM" size="2" minlength="2" maxlength="2" type="number" min="1" max="12" name="expiry_month">
                         </div>
                         <div class="col-lg-4 form-group">
-                            <label>Año</label>
+                            <label class="textos-cafes">Año</label>
                             <input class="form-control solonumeros" placeholder="YY" size="2" minlength="2" maxlength="2" type="number" min="21" name="expiry_year" minlength="2" maxlength="2" required>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
+                    <div class="row" style="justify-content: center">
+                        <div class="col-6">
                             <div class="form-control total btn btn-danger">
-                                Total: <span class="amount font-weight-bold"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
+                                Total: <span class="amount font-weight-bold textos-grises"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12 form-group">
-                            <button class="form-control btn btn-success submit-button" type="submit" style="margin-top: 10px;">Pagar »</button>
+                    <div class="row" style="justify-content: center">
+                        <div class="col-6 form-group">
+                            <button class="form-control btn btn-success submit-button btn-cafe" type="submit" style="margin-top: 10px;">Pagar »</button>
                         </div>
                     </div>
                 </form>
@@ -102,31 +102,31 @@
                 <form action="{{ route('paymentIntent') }}" id="frmPaymentOxxo" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" method="post" style="display:none;">
                     @csrf
                     <div class="form-row">
-                        <label for="name">
-                        Name
+                        <label for="name" class="textos-cafes">
+                        Nombre completo:
                         </label>
                         <input id="name" name="name" class="form-control" required>
                     </div>
 
                     <div class="form-row">
-                        <label for="email">
-                        Email
+                        <label for="email" class="textos-cafes">
+                        Correo electrónico:
                         </label>
                         <input id="email" name="email" class="form-control" required>
-                    </div>
+                    </div><br>
 
                     <!-- Used to display form errors. -->
                     <div id="error-message" role="alert"></div>
-                    <div class="row mt-2">
-                        <div class="col-lg-12">
+                    <div class="row mt-2" style="justify-content: center;">
+                        <div class="col-6">
                             <div class="form-control total btn btn-danger">
-                                Total: <span class="amount font-weight-bold"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
+                                Total: <span class="amount font-weight-bold textos-grises"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-lg-12 form-group">
-                            <button id="submit-button" style="border-radius:20px;" class="form-control btn btn-success submit-button">Pay with OXXO</button>
+                    <div class="row mt-2" style="justify-content: center;">
+                        <div class="col-6 form-group">
+                            <button id="submit-button" style="border-radius:20px;" class="form-control btn btn-success submit-button btn-cafe">Pagar con OXXO Pago</button>
                         </div>
                     </div>
                 </form>
