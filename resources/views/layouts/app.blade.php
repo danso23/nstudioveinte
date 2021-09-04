@@ -24,6 +24,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- AOS ANIMATION -->
     <link rel="stylesheet" type="text/css" href="{{ asset('animation_aos/aos.css') }}">
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -120,6 +121,7 @@
         <script type="text/javascript" src="{{ asset('animation_aos/aos.js') }}"></script>
         <!-- INIT AOS -->
         <script type="text/javascript" src="{{ asset('js/animation.js') }}"></script>
+        @yield('script')
     </div>
     </section> 
 </body>
