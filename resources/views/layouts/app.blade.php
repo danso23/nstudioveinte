@@ -33,8 +33,8 @@
             <h3 class="textos-grises">Descuentos hasta un 30% <br class="d-block d-sm-block d-md-none d-lg-none">
             <span>Consultas las bases <a href="#" class="textos-cafes">aquí</a> </span></h3>
         </div>
-        <div class="container info-nav">
-            <div class="row mrl-q">
+        <div class="col-12 container info-nav">
+            <div class="col-12 mrl-q">
                 <header id="site-header">
                     <a href="{{ asset('/')}}" class="logo">
                         <img src="{{ asset('img/logo.svg') }}" class="logo-black" alt="">
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <main class="py-4" data-aos="fade-in">
+        <main class="@if (Request::is('/')) py-0 @else py-4 @endif" data-aos="fade-in">
             @yield('content')
         </main>
         <!--footer-->

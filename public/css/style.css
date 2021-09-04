@@ -35,7 +35,7 @@ body.menu-opened {
 }
 
 .info-nav{
-  background-color: white;
+  background-color: #efeae7;
 }
 
 .info-nav ul.menu-right{
@@ -762,7 +762,7 @@ a.btn-more:after {
 
 .copyright ul li.br-copy{
   border-left: 1px solid #666666;
-  ffcccc  padding: 0 10px 0 10px;
+  padding: 0 10px 0 10px;
 }
 
 .copyright ul li.link-copy{

@@ -8,12 +8,15 @@ use App\Models\ProductoModel AS Producto;
 use App\Models\CategoriaModel AS Categoria;
 use Illuminate\Support\Arr;
 use App\Http\Controllers\UtilsController AS Utils;
+use DB;
 
 class ProductoController extends Controller{
     public function __construct(){
         $this->table ="productos";
         $this->id ="id_producto";
     }
+
+    /******SECCIÓN ADMINISTRADO******/
 
     public function mostrarProductosView(){
         $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
@@ -27,6 +30,49 @@ class ProductoController extends Controller{
         return Response::json($productos);
     }
 
+    public function storeProducto(Request $request, $id){
+        DB::beginTransaction();
+        try {
+            if($id != 0){
+                $producto = Producto::where('id_producto', $id)
+                ->update([
+                    'nombre_producto' => $request->nombre,
+                    'desc_producto' => $request->desc_curso,
+                    'url_imagen' => $request->portada
+                    //'id_categoria' => $request->categoria
+                ]);
+                $result = array(
+                    "Error" => false,
+                    "message" => "Se ha editado con exito el curso con folio [$id]"
+                );
+            }
+            else{
+                $temario = new Curso();
+                $temario->nombre = $request->nombre;
+                $temario->desc_curso = $request->desc_curso;
+                $temario->portada = $request->portada;
+                $temario->id_categoria = $request->categoria;
+                $temario->activo = 1;
+                $temario->save();
+                $result = array(
+                    "Error" => false,
+                    "message" => "Se ha guardado con exito el temario ",
+                    "iId" => $temario->id
+                );
+            }
+        }
+        catch (\Exception $e) {
+            DB::rollback();
+            $result = array(
+                "Error" => true,
+                "message" => "Ha ocurrido un error, por favor contacte al administrador o inténtelo más tarde | ".$e
+            );
+            return Response::json($result);
+        }
+        DB::commit();
+        return Response::json($result);
+    }
+    /******FIN SECCIÓN ADMINISTRADO******/
     public function index(){
     	$productos = Producto::where('activo', '1')->get();
         $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();

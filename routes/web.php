@@ -55,4 +55,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/catalogoproductos', 'ProductoController@mostrarProductosView')->name('Catalogo.Productos');//->middleware('auth');
     Route::get('/jsonproductos', 'ProductoController@jsonProductos')->name('json.productos');//->middleware('auth');
+
+    /** GUARDADO**/
+    Route::post('/storeProducto/{id}', 'ProductoController@storeProducto')->name('admin.storeProducto');
 });
