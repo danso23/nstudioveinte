@@ -49,3 +49,10 @@ Route::post('/payment/paymentIntent', 'PaymentController@paymentIntent')->name('
 Route::get('/payment/ticket', 'PaymentController@ticket')->name('payment.ticket');
 
 Route::get('quienes-somos', 'ProductoController@quienesSomos')->name('quienes.somos');
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/catalogoproductos', 'ProductoController@mostrarProductosView')->name('Catalogo.Productos');//->middleware('auth');
+    Route::get('/jsonproductos', 'ProductoController@jsonProductos')->name('json.productos');//->middleware('auth');
+});

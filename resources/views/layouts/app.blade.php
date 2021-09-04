@@ -53,6 +53,8 @@
                             @else
                                 <a href="{{ route('cart.checkout') }}" class="icon-shopping"><img src="{{ asset('icons/carrito.svg') }}" alt="Carrito"></a>
                             @endif
+
+                            <a class='btn' href="{{ url('/logout') }}"> Cerrar sesión </a>
                         </li>
                         <li class="menu-m">
                             <button type="button" class="toggle-menu btn-primary">

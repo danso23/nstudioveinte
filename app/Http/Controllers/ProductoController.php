@@ -15,6 +15,18 @@ class ProductoController extends Controller{
         $this->id ="id_producto";
     }
 
+    public function mostrarProductosView(){
+        $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
+        $datos = array('categorias' => $categorias );
+    	return view('admin.productos')->with('datos', $datos);
+    }
+
+    /** JSON PARA ADMIN**/
+    public function jsonProductos(){
+        $productos = Producto::all();
+        return Response::json($productos);
+    }
+
     public function index(){
     	$productos = Producto::where('activo', '1')->get();
         $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();

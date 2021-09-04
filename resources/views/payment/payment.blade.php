@@ -117,8 +117,18 @@
 
                     <!-- Used to display form errors. -->
                     <div id="error-message" role="alert"></div>
-
-                    <button id="submit-button">Pay with OXXO</button>
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="form-control total btn btn-danger">
+                                Total: <span class="amount font-weight-bold"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-12 form-group">
+                            <button id="submit-button" style="border-radius:20px;" class="form-control btn btn-success submit-button">Pay with OXXO</button>
+                        </div>
+                    </div>
                 </form>
                 <!-- FIN FORM Oxxo Pay -->
             </div>
@@ -154,12 +164,12 @@
             stripe.confirmOxxoPayment(
                 clientSecret,
                 {
-                payment_method: {
-                    billing_details: {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
+                    payment_method: {
+                        billing_details: {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        },
                     },
-                },
                 }) // Stripe.js will open a modal to display the OXXO voucher to your customer
                 .then(function(result) {
                 // This promise resolves when the customer closes the modal

@@ -5,9 +5,11 @@
             <div class="inner-navigation">
                 <ul id="menu-main-menu" class="menu">
                 <ul class="category-hero" class="menu">
-                        @foreach ($datos['categorias'] as $categoria)
-                            <li style="list-style:none"><a href="{{ url('/categoria') }}/{{ $categoria->id_categoria}}">{{ $categoria->nombre_categoria }}</a></li>
-                        @endforeach
+                        @isset($datos['categorias'])
+                            @foreach ($datos['categorias'] as $categoria)
+                                <li style="list-style:none"><a href="{{ url('/categoria') }}/{{ $categoria->id_categoria}}">{{ $categoria->nombre_categoria }}</a></li>
+                            @endforeach
+                        @endisset
                     </ul>
                 </ul>
             </div>
