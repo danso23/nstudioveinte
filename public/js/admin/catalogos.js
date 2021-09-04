@@ -48,62 +48,6 @@ $(document).ready(function(){
 	});
 });
 
-function dataTemario() {
-	$.ajax({
-    	type: "GET",
-    	dataType: "json",
-    	url: url_global+"/Admin/mostrarTemarios",
-		success: function(data){
-			var element ="";
-			element +="<thead>"+
-                    "<tr>"+
-						"<th>"+
-							"<!-- <span class='custom-checkbox'>"+
-								"<input type='checkbox' id='selectAll'>"+
-								"<label for='selectAll'></label>"+
-							"</span>--> Folio"+
-						"</th>"+
-                        "<th>Temario</th>"+
-                        "<th>Descripción</th>"+
-						"<th>Video</th>"+
-                        "<th>Fecha creación</th>"+
-                        "<th>Acciones</th>"+
-						"<th>ID</th>"+
-						"<th>Mod</th>"+
-						"<th>Cur</th>"+
-                    "</tr>"+
-                "</thead>"+
-				"<tbody>";
-			data.forEach((el, i) => {
-				element+="<tr>"+
-					"<td>"+
-						"<span class='custom-checkbox'>"+
-							"<input type='checkbox' id='checkbox"+el.id_temario+"' name='options[]' value='"+el.id_temario+"'>"+
-							"<label for='checkbox"+el.id_temario+"'>"+el.id_temario+"</label>"+
-						"</span>"+
-					"</td>"+
-					"<td>"+el.nombre+"</td>"+
-					"<td>"+el.descripcion+"</td>"+
-					"<td>"+el.url_video+"</td>"+
-					"<td>"+el.fecha_creacion+"</td>"+
-					"<td>"+
-						"<a href='#editTemarioModal' class='edit' id='btn_edit_"+el.id_temario+"' data-toggle='modal' onclick='storeTemario("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
-						"<a href='#deleteTemarioModal' class='delete' id='btn_delete_"+el.id_temario+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
-					"</td>"+
-					"<td>"+el.id_temario+"</td>"+
-					"<td>"+el.id_modulo+"</td>"+
-					"<td>"+el.id_curso+"</td>"+
-				"</tr>";
-			});
-			element+="</tbody>";
-			objTarget = {"visible": false,  "targets": [ 6,7,8 ] };
-			$("#catalogoTemario").empty();
-			$("#catalogoTemario").html(element);
-			crearDataTable("catalogoTemario", objTarget);
-        }
-	})
-}
-
 function dataCurso() {
 	$.ajax({
     	type: "GET",
@@ -157,157 +101,6 @@ function dataCurso() {
 	})
 }
 
-function dataMaterial() {
-	$.ajax({
-    	type: "GET",
-    	dataType: "json",
-    	url: url_global+"/Admin/mostrarMaterial",
-		success: function(data){
-			var element ="";
-			element +="<thead>"+
-                    "<tr>"+
-						"<th>"+
-							"<!-- <span class='custom-checkbox'>"+
-								"<input type='checkbox' id='selectAll'>"+
-								"<label for='selectAll'></label>"+
-							"</span>--> Folio"+
-						"</th>"+
-                        "<th>Nombre</th>"+
-                        "<th>Url</th>"+
-						"<th>Nombre curso</th>"+
-                        "<th>Fecha de creación</th>"+
-                        "<th>Acciones</th>"+
-						"<th>IdCurso</th>"+
-						"<th>IdMaterial</th>"+
-                    "</tr>"+
-                "</thead>"+
-				"<tbody>";
-			data.forEach((el, i) => {
-				element+="<tr>"+
-					"<td>"+
-						"<span class='custom-checkbox'>"+
-							"<input type='checkbox' id='checkbox"+el.id_material+"' name='options[]' value='"+el.id_material+"'>"+
-							"<label for='checkbox"+el.id_material+"'>"+el.id_material+"</label>"+
-						"</span>"+
-					"</td>"+
-					"<td>"+el.nombre+"</td>"+
-					"<td>"+el.url+"</td>"+
-					"<td>"+el.nombre_curso+"</td>"+
-					"<td>"+el.fecha_creacion+"</td>"+
-					"<td>"+
-						"<a href='#editMaterialModal' class='edit' id='btn_edit_"+el.id_curso+"' data-toggle='modal' onclick='storeMaterial("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
-						"<a href='#deleteMaterialModal' class='delete' id='btn_delete_"+el.id_curso+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
-					"</td>"+
-					"<td>"+el.id_curso+"</td>"+
-					"<td>"+el.id_material+"</td>"+
-				"</tr>";
-			});
-			element+="</tbody>";
-			objTarget = {"visible": false,  "targets": [ 6,7 ] };
-			$("#catalogoMaterial").empty();
-			$("#catalogoMaterial").html(element);
-			crearDataTable("catalogoMaterial", objTarget);
-        }
-	})
-}
-
-function dataLives() {
-	$.ajax({
-    	type: "GET",
-    	dataType: "json",
-    	url: url_global+"/Admin/mostrarLives",
-		success: function(data){
-			var element ="";
-			element +="<thead>"+
-                    "<tr>"+
-						"<th>"+
-							"Folio"+
-						"</th>"+
-                        "<th>Nombre</th>"+
-                        "<th>Descripción</th>"+
-						"<th>Portada</th>"+
-                        "<th>Link</th>"+
-                        "<th>Acciones</th>"+
-						"<th>IDLIVES</th>"+
-                    "</tr>"+
-                "</thead>"+
-				"<tbody>";
-			data.forEach((el, i) => {
-				element+="<tr>"+
-					"<td>"+
-						"<span class='custom-checkbox'>"+
-							"<input type='checkbox' id='checkbox"+el.id_live+"' name='options[]' value='"+el.id_live+"'>"+
-							"<label for='checkbox"+el.id_live+"'>"+el.id_live+"</label>"+
-						"</span>"+
-					"</td>"+
-					"<td>"+el.nombre+"</td>"+
-					"<td>"+el.descripcion+"</td>"+
-					"<td>"+el.portada+"</td>"+
-					"<td>"+el.url+"</td>"+
-					"<td>"+
-						"<a href='#editLivesModal' class='edit' id='btn_edit_"+el.id_live+"' data-toggle='modal' onclick='storeLives("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
-						"<a href='#deleteLivesModal' class='delete' id='btn_delete_"+el.id_live+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
-					"</td>"+
-					"<td>"+el.id_live+"</td>"+//LIVE
-				"</tr>";
-			});
-			element+="</tbody>";
-			objTarget = {"visible": false,  "targets": [ 6 ] };
-			$("#catalogoLives").empty();
-			$("#catalogoLives").html(element);
-			crearDataTable("catalogoLives", objTarget);
-        }
-	})
-}
-
-function dataUsuario() {
-	$.ajax({
-    	type: "GET",
-    	dataType: "json",
-    	url: url_global+"/Admin/mostrarUsuarios",
-		success: function(data){
-			var element ="";
-			element +="<thead>"+
-                    "<tr>"+
-						"<th>"+
-							"Folio"+
-						"</th>"+
-                        "<th>Nombre</th>"+
-                        "<th>Apellido Paterno</th>"+
-						"<th>Apellido Materno</th>"+
-                        "<th>Correo</th>"+
-                        "<th>Acciones</th>"+
-						"<th>IDUSER</th>"+
-                    "</tr>"+
-                "</thead>"+
-				"<tbody>";
-			data.forEach((el, i) => {
-				element+="<tr>"+
-					"<td>"+
-						"<span class='custom-checkbox'>"+
-							"<input type='checkbox' id='checkbox"+el.id_user+"' name='options[]' value='"+el.id_user+"'>"+
-							"<label for='checkbox"+el.id_user+"'>"+el.id_user+"</label>"+
-						"</span>"+
-					"</td>"+
-					"<td>"+el.name+"</td>"+
-					"<td>"+el.last_name+"</td>"+
-					"<td>"+el.last_name2+"</td>"+
-					"<td>"+el.email+"</td>"+
-					"<td>"+
-						"<!-- <a href='#editMaterialModal' class='edit' id='btn_edit_"+el.id_user+"' data-toggle='modal' onclick='storeMaterial("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
-						"<a href='#deleteMaterialModal' class='delete' id='btn_delete_"+el.id_user+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a> -->"+
-					"</td>"+
-					"<td>"+el.id_user+"</td>"+
-				"</tr>";
-			});
-			element+="</tbody>";
-			objTarget = {"visible": false,  "targets": [ 6 ] };
-			$("#catalogoUsuarios").empty();
-			$("#catalogoUsuarios").html(element);
-			crearDataTable("catalogoUsuarios", objTarget);
-        }
-	})
-}
 
 function crearDataTable(table, target){
 	objDataTbl= $("#"+table).DataTable({
@@ -353,12 +146,12 @@ function storeCurso(position, tipoAccion){
 		document.querySelector('#'+form[0].id +' #desc_curso').value=datos[2];
 		document.querySelector('#'+form[0].id +' #portada').value=datos[3];
 		document.querySelector('#'+form[0].id +' #portada').value=datos[3];
-		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[6];
-		document.querySelector('#'+form[0].id +' #categoria').value=datos[7];
-		document.getElementById("modal-title-curso").innerHTML = 'Editar curso N° '+datos[6];
+		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[7];
+		// document.querySelector('#'+form[0].id +' #categoria').value=datos[7];
+		document.getElementById("modal-title-curso").innerHTML = 'Editar producto N° '+datos[7];
 	}
 	if(tipoAccion == "Nuevo"){
-		document.getElementById("modal-title-curso").innerHTML = 'Agregar curso';
+		document.getElementById("modal-title-curso").innerHTML = 'Agregar producto';
 		document.querySelector('#'+form[0].id+' #hddIdCurso').value=0;
 		document.getElementById(form[0].id).reset();
 	}

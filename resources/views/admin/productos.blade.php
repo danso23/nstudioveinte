@@ -51,7 +51,7 @@
 							<label for="portada">Imagen</label>
 							<input type="text" name="portada" id="portada" class="form-control" required>
 						</div>
-						<div class="form-group">
+						{{--<div class="form-group">
 							<label for="categoria">Categoría</label>
 							<select class="form-control" name="categoria" id="categoria">
 								<option selected hidden value="default">Selecciona una categoría</option>
@@ -59,7 +59,7 @@
 									<option value="{{$cat->id_categoria}}">{{$cat->nombre}}</option>
 								@endforeach
 							</select>
-						</div>
+						</div>--}}
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" id="btnCancelarCurso" data-dismiss="modal" value="Cancel">
