@@ -144,8 +144,8 @@ function storeCurso(position, tipoAccion){
 		var datos = objDataTbl.row( position ).data();
 		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
 		document.querySelector('#'+form[0].id +' #desc_curso').value=datos[2];
-		document.querySelector('#'+form[0].id +' #portada').value=datos[3];
-		document.querySelector('#'+form[0].id +' #portada').value=datos[3];
+		// document.querySelector('#'+form[0].id +' #portada').value=datos[3];
+		// document.querySelector('#'+form[0].id +' #portada').value=datos[3];
 		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[7];
 		// document.querySelector('#'+form[0].id +' #categoria').value=datos[7];
 		document.getElementById("modal-title-curso").innerHTML = 'Editar producto N° '+datos[7];
