@@ -35,7 +35,9 @@
                                 <div class="form-group col-12 col-md-12">
                                     <select id="inputState" class="form-control">
                                         <option selected>Talla</option>
-                                        <option>...</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
                                     </select>
                                 </div>
                             </div>

@@ -40,25 +40,68 @@
 					<div class="modal-body">
 						<input type="hidden" name="hddIdCurso" id="hddIdCurso">			
 						<div class="form-group">
-							<label for="nombre" class="letras-cafes">Nombre</label>
+							<label for="nombre" class="textos-cafes">Nombre</label>
 							<input type="text" name="nombre" id="nombre" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label for="desc_curso" class="letras-cafes">Descripción</label>
+							<label for="desc_curso" class="textos-cafes">Descripción</label>
 							<textarea name="desc_curso" id="desc_curso" class="form-control" required></textarea>
 						</div>
 						<div class="form-group">
-							<label for="portada" class="letras-cafes">Imagen</label>
+							<label for="portada" class="textos-cafes">Imagen</label>
 							<input type="text" name="portada" id="portada" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label for="categoria">Tallas</label><br>
-							<label class="textos-grises"><input type="checkbox" id="tallaS" value="S"><b>&nbsp;S</b></label><br>
-							<label class="textos-grises"><input type="checkbox" id="tallaM" value="M"><b>&nbsp;M</b></label><br>
-							<label class="textos-grises"><input type="checkbox" id="tallaG" value="G"><b>&nbsp;G</b></label><br>
+							<label for="categoria" class="textos-cafes"><b>Cantidad de piezas por talla</b></label><br>
+							<table class="table">
+                            <thead class="textos-cafes">
+                                <tr>
+                                <th scope="col" style="width: 30%">S</th>
+                                <th scope="col" style="width: 30%">M</th>
+                                <th scope="col" style="width: 30%">L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td class="textos-grises"><input type="text" name="cantidad_s" id="cantidad_s" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="cantidad_m" id="cantidad_m" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="cantidad_g" id="cantidad_g" class="form-control" required></td>
+                                </tr>
+                            </tbody>
+                        </table>
 						</div>
+						<table class="table">
+                            <thead class="textos-cafes">
+                                <tr>
+                                <th scope="col"></th>
+                                <th scope="col">S</th>
+                                <th scope="col">M</th>
+                                <th scope="col">L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row" class="textos-cafes">Contorno busto</th>
+                                <td class="textos-grises"><input type="text" name="busto_s" id="busto_s" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="busto_m" id="busto_m" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="busto_g" id="busto_g" class="form-control" required></td>
+                                </tr>
+                                <tr>
+                                <th scope="row" class="textos-cafes">Largo total</th>
+                                <td class="textos-grises"><input type="text" name="largo_s" id="largo_s" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="largo_m" id="largo_m" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="largo_g" id="largo_g" class="form-control" required></td>
+                                </tr>
+                                <tr>
+                                <th scope="row" class="textos-cafes">Contorno manga</th>
+                                <td class="textos-grises"><input type="text" name="manga_s" id="manga_s" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="manga_m" id="manga_m" class="form-control" required></td>
+                                <td class="textos-grises"><input type="text" name="manga_g" id="manga_g" class="form-control" required></td>
+                                </tr>
+                            </tbody>
+                        </table>
 						<div class="form-group">
-							<label for="categoria" class="letras-cafes">Colores</label>
+							<label for="categoria" class="textos-cafes">Colores</label>
 							<select class="form-control" name="colores" id="colores" multiple>
 								<option selected hidden value="default">Selecciona los colores (Puedes elegir varias opciones)</option>
 								{{--@foreach($datos['colores'] as $cat)
@@ -67,7 +110,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="categoria" class="letras-cafes">Categoría</label>
+							<label for="categoria" class="textos-cafes">Categoría</label>
 							<select class="form-control" name="categoria" id="categoria">
 								<option selected hidden value="default">Selecciona una categoría</option>
 								{{--@foreach($datos['categorias'] as $cat)
