@@ -58,6 +58,15 @@
 							<label class="textos-grises"><input type="checkbox" id="tallaG" value="G"><b>&nbsp;G</b></label><br>
 						</div>
 						<div class="form-group">
+							<label for="categoria" class="letras-cafes">Colores</label>
+							<select class="form-control" name="colores" id="colores" multiple>
+								<option selected hidden value="default">Selecciona los colores (Puedes elegir varias opciones)</option>
+								{{--@foreach($datos['colores'] as $cat)
+									<option value="{{$cat->id_color}}">{{$cat->color}}</option>
+								@endforeach--}}
+							</select>
+						</div>
+						<div class="form-group">
 							<label for="categoria" class="letras-cafes">Categoría</label>
 							<select class="form-control" name="categoria" id="categoria">
 								<option selected hidden value="default">Selecciona una categoría</option>
