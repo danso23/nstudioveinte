@@ -51,40 +51,56 @@
             <div class="container details-producto">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-3">
-                        <div class="col-12 info-2 d-none d-md-block" style="background-color: #E6C8BD;">
-                            <p class="textos-grises">Envíos gratuitos en compras superiores a $999</p><br>
-                            <p class="textos-grises">Debido a las medidas actuales para proteger la seguridad de los empleados de nuestro centro de distribución con motivos del COVID-19, las entregas pueden presentar un retraso. Puedes consultar el estatus de tu pedido <a href="#" class="textos-cafes">aquí</a>.</p>
+                    </div>
+                    <div id="detalles" class="col-12 col-md-9 info-details">
+                        <h3 class="textos-cafes" >Guía de tallas</h3><br>
+                        <table class="table">
+                            <thead class="textos-cafes">
+                                <tr>
+                                <th scope="col"></th>
+                                <th scope="col">S</th>
+                                <th scope="col">M</th>
+                                <th scope="col">L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row" class="textos-cafes">Contorno busto</th>
+                                <td class="textos-grises">93</td>
+                                <td class="textos-grises">98</td>
+                                <td class="textos-grises">103</td>
+                                </tr>
+                                <tr>
+                                <th scope="row" class="textos-cafes">Largo total</th>
+                                <td class="textos-grises">89</td>
+                                <td class="textos-grises">90</td>
+                                <td class="textos-grises">91</td>
+                                </tr>
+                                <tr>
+                                <th scope="row" class="textos-cafes">Contorno manga</th>
+                                <td class="textos-grises">30</td>
+                                <td class="textos-grises">32</td>
+                                <td class="textos-grises">34</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="textos-grises">-Medidas mostradas en cm.</p>
+                        <p class="textos-grises">-Las medidas mostradas en la tabla fueron obtenidas directamente de la prenda, puede existir una variación de + - 2cm. Se recomienda dejar por lo menos 1 cm de holguera en contorno de busto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container details-producto">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-3">
+                        <div class="col-12 info-2 d-none d-md-block" style="background-color: #B97232 !important;">
+                            <p>Envíos gratuitos en compras superiores a $999</p><br>
+                            <p>Debido a las medidas actuales para proteger la seguridad de los empleados de nuestro centro de distribución con motivos del COVID-19, las entregas pueden presentar un retraso. Puedes consultar el estatus de tu pedido <a href="#" class="textos-cafes">aquí</a>.</p>
                         </div>
                     </div>
-                    <div id="detalles" class="col-12 col-md-9 info-details ocultar">
+                    <div id="detalles" class="col-12 col-md-9 info-details" >
                         <h3 class="textos-cafes" >Descripción</h3>
                         <p class="textos-grises">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        
                     </div>
-                    <div id="info-adicional" class="col-12 col-md-9 info-details ocultar">
-                        <h6>Información adicional</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        <h6>Careta</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        <h6>Protector de pecho</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        <h6>Protector de las piernas</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                    </div>
-                    <div id="valoraciones" class="col-12 col-md-9 info-details ocultar">
-                        <h6>Valoraciones</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        <h6>Careta</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        <h6>Protector de pecho</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                        <h6>Protector de las piernas</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
-                    </div>
-                    <div class="col-11 info-2 d-block d-md-none">
-                            <p>Envíos gratuitos en compras superiores a $999</p><br>
-                            <p>Debido a las medidas actuales para proteger la seguridad de los empleados de nuestro centro de distribución con motivos del COVID-19, las entregas pueden presentar un retraso. Puedes consultar el estatus de tu pedido <a href="#">aquí</a>.</p>
-                        </div>
                 </div>
             </div>
         @else
