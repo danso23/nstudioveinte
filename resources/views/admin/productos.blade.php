@@ -40,26 +40,32 @@
 					<div class="modal-body">
 						<input type="hidden" name="hddIdCurso" id="hddIdCurso">			
 						<div class="form-group">
-							<label for="nombre">Nombre</label>
+							<label for="nombre" class="letras-cafes">Nombre</label>
 							<input type="text" name="nombre" id="nombre" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label for="desc_curso">Descripción</label>
+							<label for="desc_curso" class="letras-cafes">Descripción</label>
 							<textarea name="desc_curso" id="desc_curso" class="form-control" required></textarea>
 						</div>
 						<div class="form-group">
-							<label for="portada">Imagen</label>
+							<label for="portada" class="letras-cafes">Imagen</label>
 							<input type="text" name="portada" id="portada" class="form-control" required>
 						</div>
-						{{--<div class="form-group">
-							<label for="categoria">Categoría</label>
+						<div class="form-group">
+							<label for="categoria">Tallas</label><br>
+							<label class="textos-grises"><input type="checkbox" id="tallaS" value="S"><b>&nbsp;S</b></label><br>
+							<label class="textos-grises"><input type="checkbox" id="tallaM" value="M"><b>&nbsp;M</b></label><br>
+							<label class="textos-grises"><input type="checkbox" id="tallaG" value="G"><b>&nbsp;G</b></label><br>
+						</div>
+						<div class="form-group">
+							<label for="categoria" class="letras-cafes">Categoría</label>
 							<select class="form-control" name="categoria" id="categoria">
 								<option selected hidden value="default">Selecciona una categoría</option>
-								@foreach($datos['categorias'] as $cat)
+								{{--@foreach($datos['categorias'] as $cat)
 									<option value="{{$cat->id_categoria}}">{{$cat->nombre}}</option>
-								@endforeach
+								@endforeach--}}
 							</select>
-						</div>--}}
+						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" id="btnCancelarCurso" data-dismiss="modal" value="Cancel">
