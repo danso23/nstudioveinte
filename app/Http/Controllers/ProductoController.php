@@ -38,8 +38,11 @@ class ProductoController extends Controller{
                 ->update([
                     'nombre_producto' => $request->nombre,
                     'desc_producto' => $request->desc_curso,
-                    'url_imagen' => $request->portada
-                    //'id_categoria' => $request->categoria
+                    'url_imagen' => $request->portada,
+                    'id_categoria' => $request->categoria,
+                    'cantidad_s' => $request->cantidad_s,
+                    'cantidad_m' => $request->cantidad_m,
+                    'cantidad_g' => $request->cantidad_g,
                 ]);
                 $result = array(
                     "Error" => false,
@@ -47,17 +50,30 @@ class ProductoController extends Controller{
                 );
             }
             else{
-                $temario = new Curso();
-                $temario->nombre = $request->nombre;
-                $temario->desc_curso = $request->desc_curso;
-                $temario->portada = $request->portada;
-                $temario->id_categoria = $request->categoria;
-                $temario->activo = 1;
-                $temario->save();
+                $producto = new Producto();
+                $producto->nombre_producto = $request->nombre;
+                $producto->desc_producto = $request->desc_curso;
+                $producto->url_imagen = $request->portadaFile;
+                $producto->id_categoria = $request->categoria;
+                // $producto->precio = $request->precio;
+                $producto->cantidad_s = $request->cantidad_s;
+                $producto->cantidad_m = $request->cantidad_m;
+                $producto->cantidad_g = $request->cantidad_g;
+                $producto->busto_s = $request->busto_s;
+                $producto->busto_m = $request->busto_m;
+                $producto->busto_g = $request->busto_g;
+                $producto->largo_s = $request->largo_s;
+                $producto->largo_m = $request->largo_m;
+                $producto->largo_g = $request->largo_g;
+                $producto->manga_s = $request->manga_s;
+                $producto->manga_m = $request->manga_m;
+                $producto->manga_g = $request->manga_g;
+                $producto->activo = 1;
+                $producto->save();
                 $result = array(
                     "Error" => false,
-                    "message" => "Se ha guardado con exito el temario ",
-                    "iId" => $temario->id
+                    "message" => "Se ha guardado con exito el producto ",
+                    "iId" => $producto->id
                 );
             }
         }

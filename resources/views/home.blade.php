@@ -4,6 +4,13 @@
     <!--start content-->
     <section class="hero">
         <img class="d-block w-100" src="img/banner.png" alt="First slide" width="100%">
+        <div class="col-12 mt-3 text-center">
+            @foreach($datos['categorias'] as $cat)
+                <div class="d-inline">
+                    <a href="{{ url('/categoria') }}/{{ $cat->id_categoria}}" class="a-menu"><span class="textos-cafes">{{ $cat->nombre_categoria }}</span></a>
+                </div>
+            @endforeach
+        </div>
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-12 col-s-12">

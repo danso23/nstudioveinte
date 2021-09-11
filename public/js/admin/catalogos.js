@@ -37,11 +37,6 @@ $(document).ready(function(){
 		guardarMaterial();
 	});
 
-	$("#btnGuardarLives").click(function(e) {
-		e.preventDefault();
-		guardarLives();
-	});
-
 	$("#btnGuardarUsuario").click(function(e) {
 		e.preventDefault();
 		guardarUsuario();
@@ -68,6 +63,18 @@ function dataCurso() {
                         "<th>Acciones</th>"+
 						"<th>Id</th>"+
 						"<th>IdCategoria</th>"+
+						"<th>cantidad_s</th>"+
+						"<th>cantidad_m</th>"+
+						"<th>cantidad_g</th>"+
+						"<th>busto_s</th>"+
+						"<th>busto_m</th>"+
+						"<th>busto_g</th>"+
+						"<th>largo_s</th>"+
+						"<th>largo_m</th>"+
+						"<th>largo_g</th>"+
+						"<th>manga_s</th>"+
+						"<th>manga_m</th>"+
+						"<th>manga_g</th>"+
                     "</tr>"+
                 "</thead>"+
 				"<tbody>";
@@ -83,17 +90,29 @@ function dataCurso() {
 					"<td>"+el.desc_producto+"</td>"+
 					"<td>"+el.url_imagen+"</td>"+
 					"<td>$ "+el.precio+"</td>"+
-					"<td>"+el.cantidad+"</td>"+
+					"<td>"+el.cantidad_s+"</td>"+
 					"<td>"+
 						"<a href='#editCursoModal' class='edit' id='btn_edit_"+el.id_producto+"' data-toggle='modal' onclick='storeCurso("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
 						"<a href='#deleteCursoModal' class='delete' id='btn_delete_"+el.id_producto+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
 					"</td>"+
 					"<td>"+el.id_producto+"</td>"+
 					"<td>"+el.id_categoria+"</td>"+
+					"<td>"+el.cantidad_s+"</td>"+
+					"<td>"+el.cantidad_m+"</td>"+
+					"<td>"+el.cantidad_g+"</td>"+
+					"<td>"+el.busto_s+"</td>"+
+					"<td>"+el.busto_m+"</td>"+
+					"<td>"+el.busto_g+"</td>"+
+					"<td>"+el.largo_s+"</td>"+
+					"<td>"+el.largo_m+"</td>"+
+					"<td>"+el.largo_g+"</td>"+
+					"<td>"+el.manga_s+"</td>"+
+					"<td>"+el.manga_m+"</td>"+
+					"<td>"+el.manga_g+"</td>"+
 				"</tr>";
 			});
 			element+="</tbody>";
-			objTarget = {"visible": false,  "targets": [ 7,8 ] };
+			objTarget = {"visible": false,  "targets": [ 7,8,9,10,11,12,13,14,15,16,17,18,19,20 ] };
 			$("#catalogoCursos").empty();
 			$("#catalogoCursos").html(element);
 			crearDataTable("catalogoCursos", objTarget);
@@ -144,10 +163,20 @@ function storeCurso(position, tipoAccion){
 		var datos = objDataTbl.row( position ).data();
 		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
 		document.querySelector('#'+form[0].id +' #desc_curso').value=datos[2];
-		// document.querySelector('#'+form[0].id +' #portada').value=datos[3];
-		// document.querySelector('#'+form[0].id +' #portada').value=datos[3];
+		//document.querySelector('#'+form[0].id +' #portada')value=datos3;
 		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[7];
-		// document.querySelector('#'+form[0].id +' #categoria').value=datos[7];
+		document.querySelector('#'+form[0].id +' #cantidad_s').value=datos[9];
+		document.querySelector('#'+form[0].id +' #cantidad_m').value=datos[10];
+		document.querySelector('#'+form[0].id +' #cantidad_g').value=datos[11];
+		document.querySelector('#'+form[0].id +' #busto_s').value=datos[12];
+		document.querySelector('#'+form[0].id +' #busto_m').value=datos[13];
+		document.querySelector('#'+form[0].id +' #busto_g').value=datos[14];
+		document.querySelector('#'+form[0].id +' #largo_s').value=datos[15];
+		document.querySelector('#'+form[0].id +' #largo_m').value=datos[16];
+		document.querySelector('#'+form[0].id +' #largo_g').value=datos[17];
+		document.querySelector('#'+form[0].id +' #manga_s').value=datos[18];
+		document.querySelector('#'+form[0].id +' #manga_m').value=datos[19];
+		document.querySelector('#'+form[0].id +' #manga_g').value=datos[20];
 		document.getElementById("modal-title-curso").innerHTML = 'Editar producto N° '+datos[7];
 	}
 	if(tipoAccion == "Nuevo"){
@@ -157,112 +186,10 @@ function storeCurso(position, tipoAccion){
 	}
 }
 
-function storeLives(position, tipoAccion){	
-	if(tipoAccion == "Editar"){
-		debugger
-		var datos = objDataTbl.row( position ).data();
-		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
-		document.querySelector('#'+form[0].id +' #desc_Lives').value=datos[2];
-		document.querySelector('#'+form[0].id +' #portada').value=datos[3];
-		document.querySelector('#'+form[0].id +' #url').value=datos[4];
-		document.querySelector('#'+form[0].id+' #hddIdLives').value=datos[6];
-		document.getElementById("modal-title-live").innerHTML = 'Editar live N° '+datos[6];
-	}
-	if(tipoAccion == "Nuevo"){
-		document.getElementById("modal-title-live").innerHTML = 'Agregar live';
-		document.querySelector('#'+form[0].id+' #hddIdLives').value=0;
-		document.getElementById(form[0].id).reset();
-	}
-}
-
-function storeUsuarios(position, tipoAccion){	
-	if(tipoAccion == "Editar"){
-		var datos = objDataTbl.row( position ).data();
-		document.querySelector('#'+form[0].id +' #name').value=datos[1];
-		document.querySelector('#'+form[0].id +' #last_name').value=datos[2];
-		document.querySelector('#'+form[0].id +' #last_name2').value=datos[3];
-		document.querySelector('#'+form[0].id +' #email').value=datos[3];
-		document.querySelector('#'+form[0].id+' #hddIdLives').value=datos[6];
-		document.getElementById("modal-title-live").innerHTML = 'Editar Usuario N° '+datos[6];
-	}
-	if(tipoAccion == "Nuevo"){
-		document.getElementById("modal-title-live").innerHTML = 'Agregar usuario';
-		document.querySelector('#'+form[0].id+' #hddIdUsuario').value=0;
-		document.getElementById(form[0].id).reset();
-	}
-}
-
-function storeTemario(position, tipoAccion){	
-	if(tipoAccion == "Editar"){
-		var datos = objDataTbl.row( position ).data();
-		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
-		document.querySelector('#'+form[0].id +' #descripcion').value=datos[2];
-		document.querySelector('#'+form[0].id +' #url_video').value=datos[3];
-		document.querySelector('#'+form[0].id+' #hddIdTemario').value=datos[6];
-		document.querySelector('#'+form[0].id +' #modulo').value=datos[7];
-		document.querySelector('#'+form[0].id +' #curso').value=datos[8];
-		document.getElementById("modal-title-temario").innerHTML = 'Editar Temario N° '+datos[6];
-	}
-	if(tipoAccion == "Nuevo"){
-		document.getElementById("modal-title-temario").innerHTML = 'Agregar temario';
-		document.querySelector('#'+form[0].id+' #hddIdTemario').value=0;
-		document.getElementById(form[0].id).reset();
-	}
-}
-
-function storeMaterial(position, tipoAccion){
-	if(tipoAccion == "Editar"){
-		var datos = objDataTbl.row( position ).data();
-		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
-		document.querySelector('#'+form[0].id +' #url').value=datos[2];
-		document.querySelector('#'+form[0].id +' #curso').value=datos[6];
-		document.querySelector('#'+form[0].id+' #hddIdMaterial').value=datos[7];
-		document.getElementById("modal-title-material").innerHTML = 'Editar material N° '+datos[7];
-	}
-	if(tipoAccion == "Nuevo"){
-		document.getElementById("modal-title-material").innerHTML = 'Agregar material';
-		document.querySelector('#'+form[0].id+' #hddIdMaterial').value=0;
-		document.getElementById(form[0].id).reset();
-	}
-}
-
-function guardarTemario(){
-	dataform = $('#'+form[0].id).serialize();
-	dataform+="&token="+document.querySelector('meta[name="_token"]').getAttribute('content');
-	;
-	$.ajax({
-		type: "POST",
-    	dataType: "json",
-    	url: url_global+"/Admin/storeTemario/"+document.getElementById("hddIdTemario").value,
-		data: dataform,
-		success: function(data){
-			alert(data.message);
-		},
-		error: function (jqXHR, exception){
-			var msg = '';
-			if (jqXHR.status === 0)
-				msg = 'Not connect.\n Verify Network.';
-			else if (jqXHR.status == 404)
-				msg = 'Requested page not found. [404]';
-			else if (jqXHR.status == 500)
-				msg = 'Internal Server Error [500].';
-			else if (exception === 'parsererror')
-				msg = 'Requested JSON parse failed.';
-			else if (exception === 'timeout')
-				msg = 'Time out error.';
-			else if (exception === 'abort')
-				msg = 'Se aborto el proceso.';
-			else
-				msg = 'Uncaught Error.\n' + jqXHR.responseText;
-			console.log(msg);
-			alert("Ocurrio un error[1]")
-		}
-	});
-}
-
 function guardarCurso(){
 	dataform = $('#'+form[0].id).serialize();
 	dataform+="&token="+document.querySelector('meta[name="_token"]').getAttribute('content');
+	dataform+="&portadaFile="+$("#portadaFile").val();
 	;
 	$.ajax({
 		type: "POST",
