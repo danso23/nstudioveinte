@@ -64,10 +64,8 @@ function dataCurso() {
                         "<th>Descripción</th>"+
 						"<th>Portada</th>"+
                         "<th>Precio</th>"+
-						"<th>Cantidad</th>"+
+						"<th>Cantidad S</th>"+
                         "<th>Acciones</th>"+
-						"<th>Id</th>"+
-						"<th>IdCategoria</th>"+
                     "</tr>"+
                 "</thead>"+
 				"<tbody>";
@@ -82,14 +80,12 @@ function dataCurso() {
 					"<td>"+el.nombre_producto+"</td>"+
 					"<td>"+el.desc_producto+"</td>"+
 					"<td>"+el.url_imagen+"</td>"+
-					"<td>$ "+el.precio+"</td>"+
-					"<td>"+el.cantidad+"</td>"+
+					"<td>"+el.precio+"</td>"+
+					"<td>"+el.cantidad_s+"</td>"+
 					"<td>"+
 						"<a href='#editCursoModal' class='edit' id='btn_edit_"+el.id_producto+"' data-toggle='modal' onclick='storeCurso("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
 						"<a href='#deleteCursoModal' class='delete' id='btn_delete_"+el.id_producto+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
 					"</td>"+
-					"<td>"+el.id_producto+"</td>"+
-					"<td>"+el.id_categoria+"</td>"+
 				"</tr>";
 			});
 			element+="</tbody>";

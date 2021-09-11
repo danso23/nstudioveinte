@@ -70,6 +70,7 @@
                             </tbody>
                         </table>
 						</div>
+						<label for="categoria" class="textos-cafes"><b>Guía de tallas</b></label><br>
 						<table class="table">
                             <thead class="textos-cafes">
                                 <tr>
