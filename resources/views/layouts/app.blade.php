@@ -26,13 +26,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/animation_aos/aos.css') }}">
     @yield('css')
     <style>
-        @if (Request::is('/'))
+        /*@if (Request::is('/'))
             @media only screen and (min-width: 200px) and (max-width: 359px){
                 main{
                     bottom: 0 !important;
                 }
             }
-        @endif
+        @endif*/
     </style>
 </head>
 <body>
@@ -44,7 +44,8 @@
         </div>
         <div class="col-12 container info-nav" style="padding-left: 170px; padding-right: 170px;">
             <div class="col-12 mrl-q">
-                <header id="site-header" style="@if (Request::is('/')) padding: 0px 0px !important; @endif">
+                <header id="site-header">
+                    <!-- style="@if (Request::is('/')) padding: 0px 0px !important; @endif" -->
                     <a href="{{ asset('/')}}" class="logo">
                         <img src="{{ asset('public/img/logo.svg') }}" class="logo-black" alt="">
                         <!-- <img src="img/logo.svg" class="logo-white" alt=""> -->
@@ -93,7 +94,8 @@
             </div>
         </div>
 
-        <main class="@if (Request::is('/')) py-0 @else py-4 @endif" data-aos="fade-in" style="@if (Request::is('/')) position: relative;bottom: 70px; @endif">
+        <main class="@if (Request::is('/')) py-0 @else py-4 @endif" data-aos="fade-in">
+        <!-- style="@if (Request::is('/')) position: relative;bottom: 70px; @endif" -->
             @yield('content')
         </main>
         <!--footer-->
