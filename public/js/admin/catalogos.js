@@ -75,6 +75,7 @@ function dataCurso() {
 						"<th>manga_s</th>"+
 						"<th>manga_m</th>"+
 						"<th>manga_g</th>"+
+						"<th>color</th>"+
                     "</tr>"+
                 "</thead>"+
 				"<tbody>";
@@ -109,10 +110,11 @@ function dataCurso() {
 					"<td>"+el.manga_s+"</td>"+
 					"<td>"+el.manga_m+"</td>"+
 					"<td>"+el.manga_g+"</td>"+
+					"<td>"+el.color+"</td>"+
 				"</tr>";
 			});
 			element+="</tbody>";
-			objTarget = {"visible": false,  "targets": [ 7,8,9,10,11,12,13,14,15,16,17,18,19,20 ] };
+			objTarget = {"visible": false,  "targets": [ 7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 ] };
 			$("#catalogoCursos").empty();
 			$("#catalogoCursos").html(element);
 			crearDataTable("catalogoCursos", objTarget);
@@ -164,25 +166,25 @@ function deleteCurso(position, tipoAccion){
 /***Funcion editar curso*/
 function storeCurso(position, tipoAccion){
 	if(tipoAccion == "Editar"){
-		
 		var datos = objDataTbl.row( position ).data();
 		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
 		document.querySelector('#'+form[0].id +' #desc_curso').value=datos[2];
 		//document.querySelector('#'+form[0].id +' #portada')value=datos3;
 		document.querySelector('#'+form[0].id +' #precio').value=datos[4].replace("$", "");
 		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[7];
-		document.querySelector('#'+form[0].id +' #cantidad_s').value=datos[9];
-		document.querySelector('#'+form[0].id +' #cantidad_m').value=datos[10];
-		document.querySelector('#'+form[0].id +' #cantidad_g').value=datos[11];
-		document.querySelector('#'+form[0].id +' #busto_s').value=datos[12];
-		document.querySelector('#'+form[0].id +' #busto_m').value=datos[13];
-		document.querySelector('#'+form[0].id +' #busto_g').value=datos[14];
-		document.querySelector('#'+form[0].id +' #largo_s').value=datos[15];
-		document.querySelector('#'+form[0].id +' #largo_m').value=datos[16];
-		document.querySelector('#'+form[0].id +' #largo_g').value=datos[17];
-		document.querySelector('#'+form[0].id +' #manga_s').value=datos[18];
-		document.querySelector('#'+form[0].id +' #manga_m').value=datos[19];
-		document.querySelector('#'+form[0].id +' #manga_g').value=datos[20];
+		document.querySelector('#'+form[0].id +' #cantidad_s').value=(datos[9] == "null") ? "" : datos[9];
+		document.querySelector('#'+form[0].id +' #cantidad_m').value=(datos[10] == "null") ? "" : datos[10];
+		document.querySelector('#'+form[0].id +' #cantidad_g').value=(datos[11] == "null") ? "" : datos[11];
+		document.querySelector('#'+form[0].id +' #busto_s').value=(datos[12] == "null") ? "" : datos[12];
+		document.querySelector('#'+form[0].id +' #busto_m').value=(datos[13] == "null") ? "" : datos[13];
+		document.querySelector('#'+form[0].id +' #busto_g').value=(datos[14] == "null") ? "" : datos[14];
+		document.querySelector('#'+form[0].id +' #largo_s').value=(datos[15] == "null") ? "" : datos[15];
+		document.querySelector('#'+form[0].id +' #largo_m').value=(datos[16] == "null") ? "" : datos[16];
+		document.querySelector('#'+form[0].id +' #largo_g').value=(datos[17] == "null") ? "" : datos[17];
+		document.querySelector('#'+form[0].id +' #manga_s').value=(datos[18] == "null") ? "" : datos[18];
+		document.querySelector('#'+form[0].id +' #manga_m').value=(datos[19] == "null") ? "" : datos[19];
+		document.querySelector('#'+form[0].id +' #manga_g').value=(datos[20] == "null") ? "" : datos[20];
+		document.querySelector('#'+form[0].id +' #color').value=(datos[21] == "null") ? "" : datos[21];
 		document.getElementById("modal-title-curso").innerHTML = 'Editar producto N° '+datos[7];
 	}
 	if(tipoAccion == "Nuevo"){
