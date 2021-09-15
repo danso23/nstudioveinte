@@ -55,7 +55,7 @@ class ProductoController extends Controller{
                 $producto->desc_producto = $request->desc_curso;
                 $producto->url_imagen = $request->portadaFile;
                 $producto->id_categoria = $request->categoria;
-                // $producto->precio = $request->precio;
+                $producto->precio = $request->precio;
                 $producto->cantidad_s = $request->cantidad_s;
                 $producto->cantidad_m = $request->cantidad_m;
                 $producto->cantidad_g = $request->cantidad_g;

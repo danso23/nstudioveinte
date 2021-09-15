@@ -61,8 +61,6 @@ function dataCurso() {
                         "<th>Precio</th>"+
 						"<th>Cantidad S</th>"+
                         "<th>Acciones</th>"+
-<<<<<<< HEAD
-=======
 						"<th>Id</th>"+
 						"<th>IdCategoria</th>"+
 						"<th>cantidad_s</th>"+
@@ -77,7 +75,6 @@ function dataCurso() {
 						"<th>manga_s</th>"+
 						"<th>manga_m</th>"+
 						"<th>manga_g</th>"+
->>>>>>> 8d5e2e32bc28293afb25940bddb1dce4796d7f6f
                     "</tr>"+
                 "</thead>"+
 				"<tbody>";
@@ -92,15 +89,11 @@ function dataCurso() {
 					"<td>"+el.nombre_producto+"</td>"+
 					"<td>"+el.desc_producto+"</td>"+
 					"<td>"+el.url_imagen+"</td>"+
-<<<<<<< HEAD
-					"<td>"+el.precio+"</td>"+
-=======
 					"<td>$ "+el.precio+"</td>"+
->>>>>>> 8d5e2e32bc28293afb25940bddb1dce4796d7f6f
 					"<td>"+el.cantidad_s+"</td>"+
 					"<td>"+
 						"<a href='#editCursoModal' class='edit' id='btn_edit_"+el.id_producto+"' data-toggle='modal' onclick='storeCurso("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
-						"<a href='#deleteCursoModal' class='delete' id='btn_delete_"+el.id_producto+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
+						"<a href='#deleteCursoModal' class='delete' id='btn_delete_"+el.id_producto+"' data-toggle='modal' data-position='"+i+"'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
 					"</td>"+
 					"<td>"+el.id_producto+"</td>"+
 					"<td>"+el.id_categoria+"</td>"+
@@ -164,13 +157,19 @@ function crearDataTable(table, target){
 	});
 }
 
-//Funcion editar curso
-function storeCurso(position, tipoAccion){	
+function deleteCurso(position, tipoAccion){
+
+}
+
+/***Funcion editar curso*/
+function storeCurso(position, tipoAccion){
 	if(tipoAccion == "Editar"){
+		
 		var datos = objDataTbl.row( position ).data();
 		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
 		document.querySelector('#'+form[0].id +' #desc_curso').value=datos[2];
 		//document.querySelector('#'+form[0].id +' #portada')value=datos3;
+		document.querySelector('#'+form[0].id +' #precio').value=datos[4].replace("$", "");
 		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[7];
 		document.querySelector('#'+form[0].id +' #cantidad_s').value=datos[9];
 		document.querySelector('#'+form[0].id +' #cantidad_m').value=datos[10];
