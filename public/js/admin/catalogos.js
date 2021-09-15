@@ -164,10 +164,12 @@ function deleteCurso(position, tipoAccion){
 /***Funcion editar curso*/
 function storeCurso(position, tipoAccion){
 	if(tipoAccion == "Editar"){
+		
 		var datos = objDataTbl.row( position ).data();
 		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
 		document.querySelector('#'+form[0].id +' #desc_curso').value=datos[2];
 		//document.querySelector('#'+form[0].id +' #portada')value=datos3;
+		document.querySelector('#'+form[0].id +' #precio').value=datos[4].replace("$", "");
 		document.querySelector('#'+form[0].id+' #hddIdCurso').value=datos[7];
 		document.querySelector('#'+form[0].id +' #cantidad_s').value=datos[9];
 		document.querySelector('#'+form[0].id +' #cantidad_m').value=datos[10];
