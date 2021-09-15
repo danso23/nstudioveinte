@@ -7,7 +7,7 @@ if(isset($_FILES['fileToUpload'])){
    $file_tmp = $_FILES['fileToUpload']['tmp_name'];
    $file_type = $_FILES['fileToUpload']['type'];
 
-   $formatos_permitidos =  array('doc','docx','xls','jpg','png');
+   $formatos_permitidos =  array('jpeg','jpg','png');
    $extension = pathinfo($file_name, PATHINFO_EXTENSION);
    if(!in_array($extension, $formatos_permitidos) ) {
       echo json_encode(array('Error' => true, 'name' => 'Formato no permitido'));

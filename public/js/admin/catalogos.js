@@ -93,7 +93,7 @@ function dataCurso() {
 					"<td>"+el.cantidad_s+"</td>"+
 					"<td>"+
 						"<a href='#editCursoModal' class='edit' id='btn_edit_"+el.id_producto+"' data-toggle='modal' onclick='storeCurso("+i+","+'"Editar"'+")'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>"+
-						"<a href='#deleteCursoModal' class='delete' id='btn_delete_"+el.id_producto+"' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
+						"<a href='#deleteCursoModal' class='delete' id='btn_delete_"+el.id_producto+"' data-toggle='modal' data-position='"+i+"'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>"+
 					"</td>"+
 					"<td>"+el.id_producto+"</td>"+
 					"<td>"+el.id_categoria+"</td>"+
@@ -157,8 +157,12 @@ function crearDataTable(table, target){
 	});
 }
 
-//Funcion editar curso
-function storeCurso(position, tipoAccion){	
+function deleteCurso(position, tipoAccion){
+
+}
+
+/***Funcion editar curso*/
+function storeCurso(position, tipoAccion){
 	if(tipoAccion == "Editar"){
 		var datos = objDataTbl.row( position ).data();
 		document.querySelector('#'+form[0].id +' #nombre').value=datos[1];
