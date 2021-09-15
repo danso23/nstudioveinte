@@ -102,13 +102,8 @@
                             </tbody>
                         </table>
 						<div class="form-group">
-							<label for="categoria" class="textos-cafes">Colores</label>
-							<select class="form-control" name="colores" id="colores" multiple>
-								<option selected hidden value="default">Selecciona los colores (Puedes elegir varias opciones)</option>
-								{{--@foreach($datos['colores'] as $cat)
-									<option value="{{$cat->id_color}}">{{$cat->color}}</option>
-								@endforeach--}}
-							</select>
+							<label for="color" class="textos-cafes">Color</label>
+							<input type="text" name="color" id="colro" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label for="categoria" class="textos-cafes">Categoría</label>

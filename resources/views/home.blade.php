@@ -18,11 +18,14 @@
     <section class="hero">
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
-                <div class="col-lg-12 col-s-12">
-                    <p class="cursivas" style="text-align: left;">Mas vendidos</p>
-                    <p class="textos-small" style="text-align: left;">AQUI VA EL BLOQUE DE LOS MÁS VENDIDOS (ESTE BLOQUE AÚN NO ESTÁ HASTA QUE EMPIECEN A GENERARSE LAS VENTAS)
-                        </p>
-                    
+                <div class="col-lg-5 col-s-12">
+                    <p class="cursivas" style="text-align: left;">La historia</p>
+                    <div class="col-s-12" style="border:5px red solid;">
+                        <img src="{{ asset('img/historia.png') }}" alt="index.php" width="65%">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-s-12 text-center">
+                    <img src="{{ asset('img/historia.png') }}" alt="index.php" width="65%">
                 </div>
             </div>
         </div>
