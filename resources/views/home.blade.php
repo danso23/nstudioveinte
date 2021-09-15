@@ -3,7 +3,7 @@
 @section('content')
     <!--start content-->
     <section class="hero">
-        <img class="d-block w-100" src="img/banner.png" alt="First slide" width="100%">
+        <img class="d-block w-100" src="public/img/banner.png" alt="First slide" width="100%">
         <div class="col-12 mt-3 text-center">
             @foreach($datos['categorias'] as $cat)
                 <div class="d-inline">
@@ -47,7 +47,7 @@
                     
                 </div>
                 <div class="col-lg-7 col-s-12 text-center">
-                    <img src="{{ asset('img/historia.png') }}" alt="index.php" width="65%">
+                    <img src="{{ asset('public/img/historia.png') }}" alt="index.php" width="65%">
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                     <p class="textos-small" style="text-align: right;">Nuestra visión es ofrecerle a las mujeres productos de calidad, con precios accesibles y en tendencia. Procurando siempre la comodidad y estilos en cada una de nuestras prendas y accesorios con los mejores diseños representativos de la marca.</p>
                 </div>
                 <div class="col-lg-4 col-s-12 text-center">
-                    <img src="{{ asset('img/misionvision.png') }}" alt="index.php" style="width:65%;" >
+                    <img src="{{ asset('public/img/misionvision.png') }}" alt="index.php" style="width:65%;" >
                 </div>
                 <div class="col-lg-4">
                     <p class="cursivas" style="text-align: left;">Misión</p>

@@ -30,7 +30,7 @@
                             <div class="row justify-content-center">
                                 @foreach ($datos['productos'] as $producto)
                                     <div class="col-9 col-sm-4 col-md-4 col-lg-4 producto">
-                                        <img src="{{ asset('img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
+                                        <img src="{{ asset('public/img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
                                         <form action="{{ route('cart.add') }}" method="post">
                                             @csrf
                                             <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
@@ -71,7 +71,7 @@
                         <!-- AQUI PONES LO QUE VENGA DE TU BUSCADOR -->
                         @foreach ($datos['buscador'] as $producto)
                                     <div class="col-9 col-sm-4 col-md-4 col-lg-4 producto">
-                                        <img src="{{ asset('img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
+                                        <img src="{{ asset('public/img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
                                         <form action="{{ route('cart.add') }}" method="post">
                                             @csrf
                                             <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
