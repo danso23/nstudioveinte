@@ -7,32 +7,24 @@
         <div class="col-12 mt-3 text-center">
             @foreach($datos['categorias'] as $cat)
                 <div class="d-inline">
-                    <a href="{{ url('/categoria') }}/{{ $cat->id_categoria}}" class="a-menu"><span class="textos-cafes">{{ $cat->nombre_categoria }}</span></a>
+                    <a href="{{ url('/categoria') }}/{{ $cat->id_categoria}}" class="a-menu" style="padding: 5px;"><span class="textos-cafes">{{ $cat->nombre_categoria }}</span></a>
                 </div>
             @endforeach
-        </div>
-        <div class="container mt-4">
-            <div class="row align-items-start text-center" style="justify-content:center;">
-                <div class="col-lg-12 col-s-12">
-                    <p class="cursivas" style="text-align: left;">Menú</p>
-                    <p class="textos-small" style="text-align: left;">MENÚ DE PRODUCTOS
-                        </p>
-                    
-                </div>
-            </div>
         </div>
     </section>
     <section class="hero">
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-5 col-s-12">
-                    <p class="cursivas" style="text-align: left;">La historia</p>
-                    <div class="col-s-12" style="border:5px red solid;">
-                        <img src="{{ asset('img/historia.png') }}" alt="index.php" width="65%">
+                    <p class="cursivas" style="text-align: left;">Más vendidos</p>
+                    <div class="col-s-12 vendido01" style="text-align: left;">
+                        <div style="background-color:#E6C8BD; width: 30%; height:400px;">
+
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-7 col-s-12 text-center">
-                    <img src="{{ asset('img/historia.png') }}" alt="index.php" width="65%">
+                    <img src="{{ asset('public/img/historia.png') }}" alt="index.php" width="65%">
                 </div>
             </div>
         </div>
