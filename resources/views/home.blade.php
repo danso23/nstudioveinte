@@ -12,19 +12,32 @@
             @endforeach
         </div>
     </section>
-    <section class="hero">
+    <section class="">
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
-                <div class="col-lg-5 col-s-12">
+                <div class="col-lg-12 col-s-12">
                     <p class="cursivas" style="text-align: left;">Más vendidos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="container ">
+            <div class="row align-items-start text-center" style="justify-content:center;">
+                <div class="col-lg-6 col-s-12">
                     <div class="col-s-12 vendido01" style="text-align: left;">
-                        <div style="background-color:#E6C8BD; width: 30%; height:400px;">
-
+                        <div style="background-color:#E6C8BD; width: 30%; height:310px; padding-top:80px;">
+                        <p class="cursivas" style="text-align: left;">Conjunto azul y blanco</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-s-12 text-center">
-                    <img src="{{ asset('public/img/historia.png') }}" alt="index.php" width="65%">
+                <div class="col-lg-3 col-s-12 text-center">
+                    <img src="{{ asset('public/img/productos/vendido02.png') }}" alt="index.php" width="100%">
+                    <p class="cursivas" style="text-align: left;">Vestido rosado</p>
+                </div>
+                <div class="col-lg-3 col-s-12 text-center">
+                    <img src="{{ asset('public/img/productos/vendido03.png') }}" alt="index.php" width="100%">
+                    <p class="cursivas" style="text-align: left;">Sandalias negras</p>
                 </div>
             </div>
         </div>

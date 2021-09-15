@@ -1414,5 +1414,6 @@ input[type=number] { -moz-appearance:textfield; }
 .a-menu:hover { text-decoration: underline 1px saddlebrown solid; }
 
 .vendido01{
-  background-image: url('../img/productos/vendido01.png');;
+  background-image: url('../img/productos/vendido01.png');
+  background-size: cover;
 }
