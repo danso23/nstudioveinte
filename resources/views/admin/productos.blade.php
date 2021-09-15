@@ -53,6 +53,10 @@
 							<input type="hidden" name="portadaFile" id="portadaFile">
 						</div>
 						<div class="form-group">
+							<label for="precio" class="textos-cafes">Precio</label>
+							<input type="text" name="precio" id="precio" class="form-control" required>
+						</div>
+						<div class="form-group">
 							<label for="categoria" class="textos-cafes"><b>Cantidad de piezas por talla</b></label><br>
 							<table class="table">
                             <thead class="textos-cafes">
@@ -104,7 +108,7 @@
                         </table>
 						<div class="form-group">
 							<label for="color" class="textos-cafes">Color</label>
-							<input type="text" name="color" id="colro" class="form-control" required>
+							<input type="text" name="color" id="color" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label for="categoria" class="textos-cafes">Categoría</label>
