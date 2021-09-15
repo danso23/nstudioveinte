@@ -390,7 +390,7 @@ a.btn-more:after {
 }
 
 .barra-top span a{
-  color: #d1baba;
+  font-family: 'Playfair Display Medium Italic';
 }
 
 @media only screen and (min-width:200px) and (max-width:359px){
@@ -1361,6 +1361,8 @@ ul.menu-details li a.activo::after{
 
 .textos-small{
   font-family: 'Poppins';
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .textos-cafes{
