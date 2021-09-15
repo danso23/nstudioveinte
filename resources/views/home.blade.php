@@ -25,8 +25,8 @@
         <div class="container ">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-6 col-s-12">
-                    <div class="col-s-12 vendido01" style="text-align: left;">
-                        <div style="background-color:#E6C8BD; width: 30%; height:310px; padding-top:80px;">
+                    <div class="col-s-12 vendido01" style="text-align: left;float: left;width: 100%;">
+                        <div style="background-color:#E6C8BD; width: 30%; height:310px; padding-top:80px;float:right">
                         <p class="cursivas" style="text-align: left;">Conjunto azul y blanco</p>
                         </div>
                     </div>
