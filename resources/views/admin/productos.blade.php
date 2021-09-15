@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('css')
 	<meta name="_token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('/fonts/fonts_roboto_varela.css') }}">
-    <link rel="stylesheet" href="{{ asset('/fonts/fonts_material.css') }}">
-    <link rel="stylesheet" href="{{ asset('/fonts/font_awesome.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/dataTables.bootstrap4.min.css') }}">
-    <link href="{{ asset('/css/admin/catalogos.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('public/fonts/fonts_roboto_varela.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/fonts/fonts_material.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/fonts/font_awesome.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/css/dataTables.bootstrap4.min.css') }}">
+    <link href="{{ asset('public/css/admin/catalogos.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
 <body>
@@ -152,10 +152,10 @@
 </body>
 @endsection
 @section('script')
-	<script src="{{ asset('/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ asset('/js/dataTables.bootstrap4.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('/js/admin/catalogos.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('/js/admin/form.js') }}"></script>
+	<script src="{{ asset('public/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('public/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/admin/catalogos.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('public/js/admin/form.js') }}"></script>
 	<script>
 		var url_global = "{{ url('') }}";
 		var form = $("#formCurso");

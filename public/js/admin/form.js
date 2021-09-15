@@ -8,7 +8,7 @@ function uploadFile(el){//Funcion encargada de enviar el archivo via AJAX
     data.append('fileToUpload',file);
                 
     $.ajax({
-        url: url_global+"/subirFile.php",
+        url: url_global+"/public/subirFile.php",
         type: "POST",
         dataType: 'JSON',
         data: data,
