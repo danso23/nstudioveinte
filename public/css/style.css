@@ -1407,3 +1407,4 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] { -moz-appearance:textfield; }
 
+.a-menu:hover { text-decoration: underline 2px saddlebrown solid; }

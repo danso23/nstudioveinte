@@ -14,7 +14,7 @@
                 @endif
                 <div class="row justify-content-center product">
                     <div class="col-9 col-sm-6 col-md-3 img-desc">
-                        <img src="{{ asset('img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block">
+                        <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block">
                     </div>
                     <div class="col-12 col-md-9 option-product">
                         <h4 class="cursivas">{{ $datos['productos']->nombre_producto }}</h4>

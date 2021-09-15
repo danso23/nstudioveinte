@@ -49,7 +49,8 @@
 						</div>
 						<div class="form-group">
 							<label for="portada" class="textos-cafes">Imagen</label>
-							<input type="text" name="portada" id="portada" class="form-control" required>
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="hidden" name="portadaFile" id="portadaFile">
 						</div>
 						<div class="form-group">
 							<label for="categoria" class="textos-cafes"><b>Cantidad de piezas por talla</b></label><br>
@@ -109,9 +110,9 @@
 							<label for="categoria" class="textos-cafes">Categoría</label>
 							<select class="form-control" name="categoria" id="categoria">
 								<option selected hidden value="default">Selecciona una categoría</option>
-								{{--@foreach($datos['categorias'] as $cat)
-									<option value="{{$cat->id_categoria}}">{{$cat->nombre}}</option>
-								@endforeach--}}
+								@foreach($datos['categorias'] as $cat)
+									<option value="{{$cat->id_categoria}}">{{$cat->nombre_categoria}}</option>
+								@endforeach
 							</select>
 						</div>
 					</div>
@@ -150,6 +151,7 @@
 	<script src="{{ asset('/js/jquery.dataTables.min.js') }}"></script>
 	<script src="{{ asset('/js/dataTables.bootstrap4.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/admin/catalogos.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/js/admin/form.js') }}"></script>
 	<script>
 		var url_global = "{{ url('') }}";
 		var form = $("#formCurso");

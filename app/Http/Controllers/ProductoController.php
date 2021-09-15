@@ -39,6 +39,7 @@ class ProductoController extends Controller{
                     'nombre_producto' => $request->nombre,
                     'desc_producto' => $request->desc_curso,
                     'url_imagen' => $request->portada,
+<<<<<<< HEAD
                     'precio' => $request->precio,
                     'cantidad_s' => $request->cantidad_s,
                     'cantidad_m' => $request->cantidad_m,
@@ -53,6 +54,12 @@ class ProductoController extends Controller{
                     'manga_m' => $request->manga_m,
                     'manga_g' => $request->manga_g
                     //'id_categoria' => $request->categoria
+=======
+                    'id_categoria' => $request->categoria,
+                    'cantidad_s' => $request->cantidad_s,
+                    'cantidad_m' => $request->cantidad_m,
+                    'cantidad_g' => $request->cantidad_g,
+>>>>>>> 8d5e2e32bc28293afb25940bddb1dce4796d7f6f
                 ]);
                 $result = array(
                     "Error" => false,
@@ -60,29 +67,30 @@ class ProductoController extends Controller{
                 );
             }
             else{
-                $temario = new Curso();
-                $temario->nombre = $request->nombre;
-                $temario->desc_curso = $request->desc_curso;
-                $temario->portada = $request->portada;
-                $cantidad_s->cantidad_s = $request->cantidad_s;
-                $cantidad_m->cantidad_m = $request->cantidad_m;
-                $cantidad_g->cantidad_g = $request->cantidad_g;
-                $busto_s->busto_s = $request->busto_s;
-                $busto_m->busto_m = $request->busto_m;
-                $busto_g->busto_g = $request->busto_g;
-                $largo_s->largo_s = $request->largo_s;
-                $largo_m->largo_m = $request->largo_m;
-                $largo_g->largo_g = $request->largo_g;
-                $manga_s->manga_s = $request->manga_s;
-                $manga_m->manga_m = $request->manga_m;
-                $manga_g->manga_g = $request->manga_g;
-                $temario->id_categoria = $request->categoria;
-                $temario->activo = 1;
-                $temario->save();
+                $producto = new Producto();
+                $producto->nombre_producto = $request->nombre;
+                $producto->desc_producto = $request->desc_curso;
+                $producto->url_imagen = $request->portadaFile;
+                $producto->id_categoria = $request->categoria;
+                // $producto->precio = $request->precio;
+                $producto->cantidad_s = $request->cantidad_s;
+                $producto->cantidad_m = $request->cantidad_m;
+                $producto->cantidad_g = $request->cantidad_g;
+                $producto->busto_s = $request->busto_s;
+                $producto->busto_m = $request->busto_m;
+                $producto->busto_g = $request->busto_g;
+                $producto->largo_s = $request->largo_s;
+                $producto->largo_m = $request->largo_m;
+                $producto->largo_g = $request->largo_g;
+                $producto->manga_s = $request->manga_s;
+                $producto->manga_m = $request->manga_m;
+                $producto->manga_g = $request->manga_g;
+                $producto->activo = 1;
+                $producto->save();
                 $result = array(
                     "Error" => false,
                     "message" => "Se ha guardado con exito el producto ",
-                    "iId" => $temario->id
+                    "iId" => $producto->id
                 );
             }
         }
