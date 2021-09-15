@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
 /*font*/
 @font-face {
     font-family: "Montserrat", sans-serif;
@@ -11,6 +12,7 @@
   font-family: "Montserrat", sans-serif;
   src: url(../fonts/AvenirLTStd-Roman.otf) format("truetype");
 }
+
 *{
   padding: 0;
   margin: 0;
@@ -374,7 +376,7 @@ a.btn-more:after {
   text-transform: uppercase;
   font-size: 35px;
   color: #B97232;
-  font-family: "Playfair Display Regular";
+  font-family: "Playfair Display";
   letter-spacing: 1.5px;
   margin-bottom: 0!important;
 }
@@ -383,7 +385,7 @@ a.btn-more:after {
   text-transform: none!important;
   font-size: 15px;
   color: white;
-  font-family: "Poppins Regular";
+  font-family: "Poppins";
   letter-spacing: 1px;
 }
 
@@ -1358,7 +1360,7 @@ ul.menu-details li a.activo::after{
 }
 
 .textos-small{
-  font-family: 'Poppins Regular';
+  font-family: 'Poppins';
 }
 
 .textos-cafes{
