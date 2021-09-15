@@ -130,7 +130,7 @@ class ProductoController extends Controller{
 
     public function productoXCategoria($id){
         $productos = Producto::join('categorias', 'productos.id_categoria', 'categorias.id_categoria')
-        ->selectRaw('productos.id_producto, categorias.nombre_categoria, productos.nombre_producto, productos.desc_producto, productos.url_imagen, productos.precio')
+        ->selectRaw('productos.id_producto, categorias.nombre_categoria, productos.nombre_producto, productos.desc_producto, productos.url_imagen, productos.precio, productos.cantidad_s, productos.cantidad_m, productos.cantidad_g, productos.busto_s, productos.busto_m, productos.busto_g, productos.largo_s, productos.largo_m, productos.largo_g, productos.manga_s, productos.manga_m, productos.manga_g')
         ->where('productos.id_categoria', $id)
         ->where('productos.activo', 1)
         ->get();

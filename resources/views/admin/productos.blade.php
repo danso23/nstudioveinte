@@ -53,6 +53,10 @@
 							<input type="hidden" name="portadaFile" id="portadaFile">
 						</div>
 						<div class="form-group">
+							<label for="precio" class="textos-cafes">Precio</label>
+							<input type="text" name="precio" id="precio" class="form-control" required>
+						</div>
+						<div class="form-group">
 							<label for="categoria" class="textos-cafes"><b>Cantidad de piezas por talla</b></label><br>
 							<table class="table">
                             <thead class="textos-cafes">
@@ -71,6 +75,7 @@
                             </tbody>
                         </table>
 						</div>
+						<label for="categoria" class="textos-cafes"><b>Guía de tallas</b></label><br>
 						<table class="table">
                             <thead class="textos-cafes">
                                 <tr>
@@ -102,13 +107,8 @@
                             </tbody>
                         </table>
 						<div class="form-group">
-							<label for="categoria" class="textos-cafes">Colores</label>
-							<select class="form-control" name="colores" id="colores" multiple>
-								<option selected hidden value="default">Selecciona los colores (Puedes elegir varias opciones)</option>
-								{{--@foreach($datos['colores'] as $cat)
-									<option value="{{$cat->id_color}}">{{$cat->color}}</option>
-								@endforeach--}}
-							</select>
+							<label for="color" class="textos-cafes">Color</label>
+							<input type="text" name="color" id="color" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label for="categoria" class="textos-cafes">Categoría</label>
