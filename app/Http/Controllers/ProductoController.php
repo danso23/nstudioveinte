@@ -39,27 +39,10 @@ class ProductoController extends Controller{
                     'nombre_producto' => $request->nombre,
                     'desc_producto' => $request->desc_curso,
                     'url_imagen' => $request->portada,
-<<<<<<< HEAD
-                    'precio' => $request->precio,
-                    'cantidad_s' => $request->cantidad_s,
-                    'cantidad_m' => $request->cantidad_m,
-                    'cantidad_g' => $request->cantidad_g,
-                    'busto_s' => $request->busto_s,
-                    'busto_m' => $request->busto_m,
-                    'busto_g' => $request->busto_g,
-                    'largo_s' => $request->largo_s,
-                    'largo_m' => $request->largo_m,
-                    'largo_g' => $request->largo_g,
-                    'manga_s' => $request->manga_s,
-                    'manga_m' => $request->manga_m,
-                    'manga_g' => $request->manga_g
-                    //'id_categoria' => $request->categoria
-=======
                     'id_categoria' => $request->categoria,
                     'cantidad_s' => $request->cantidad_s,
                     'cantidad_m' => $request->cantidad_m,
                     'cantidad_g' => $request->cantidad_g,
->>>>>>> 8d5e2e32bc28293afb25940bddb1dce4796d7f6f
                 ]);
                 $result = array(
                     "Error" => false,
