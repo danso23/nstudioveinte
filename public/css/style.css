@@ -157,7 +157,7 @@ a.btn-more:after {
 
 #site-header .logo img {
   display: inline-block;
-  width: 150px!important;
+  width: 150px;
 }
 
 #site-header .logo img.logo-white {
@@ -390,7 +390,8 @@ a.btn-more:after {
 }
 
 .barra-top span a{
-  font-family: 'Playfair Display Medium Italic';
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
 }
 
 @media only screen and (min-width:200px) and (max-width:359px){
@@ -407,7 +408,7 @@ a.btn-more:after {
   }
 
   a.icon-shopping a img, a img{
-    width: 33px;
+    width: 33px !important;
   }
   #navigation .inner-navigation {
     padding: 35% 5%;
@@ -425,7 +426,7 @@ a.btn-more:after {
     font-size: 20px;
   }
   a.icon-shopping a img, a img{
-    width: 33px;
+    width: 33px !important;
   }
   #navigation .inner-navigation {
     padding: 35% 5%;
