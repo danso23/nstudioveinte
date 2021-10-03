@@ -1387,6 +1387,51 @@ ul.menu-details li a.activo::after{
   border-radius: 40px;
 }
 
+#div-principal{
+  background-image: url('../img/banner.png');
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+}
+
+#cafes-principal{
+  font-family: Playfair Display; 
+  font-size: 40px; 
+  color: #B97232 !important;
+}
+#texto-principal{
+  line-height: 25px; 
+  margin-top: 200px;
+}
+#texto-exclusiva{
+  font-size: 35px !important;
+}
+
+@media (max-width: 768px) {
+  #div-principal{
+    background-image: url('../img/banner.png');
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+  }
+  #cafes-principal{
+    font-size: 12px; 
+  }
+  #texto-principal{
+    line-height: 0px !important; 
+    margin-top: 75px !important;
+  }
+  #texto-exclusiva{
+    font-size: 15px !important; 
+  }
+  #btn-principal{
+    display: none;
+  }
+  #img-vision{
+    display: none;
+  }
+}
+
 .btn-cafe{
   background-color: #B97232 !important;
   color: white;

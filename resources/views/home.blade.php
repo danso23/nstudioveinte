@@ -2,17 +2,24 @@
 
 @section('content')
     <!--start content-->
-    <section class="hero">
-        <img class="d-block w-100" src="public/img/banner.png" alt="First slide" width="100%">
-        <div class="col-12 mt-3 text-center">
+    <section class="hero" id="div-principal">
+    <div class="container">
+            <div class="row align-items-start text-center" style="justify-content:center;">
+                <div class="col-4 text-center" id="texto-principal">
+                    <p id="cafes-principal">Nueva colección<p class="txt-cafe-cursivas" id="texto-exclusiva">exclusiva</p></p>
+                    <button type="" class="btn btn-pink btn-add-sp" id="btn-principal">IR A TIENDA</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="col-12 text-center mt-3">
             @foreach($datos['categorias'] as $cat)
                 <div class="d-inline">
                     <a href="{{ url('/categoria') }}/{{ $cat->id_categoria}}" class="a-menu" style="padding: 5px;"><span class="textos-cafes">{{ $cat->nombre_categoria }}</span></a>
                 </div>
             @endforeach
         </div>
-    </section>
-    <section class="">
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-12 col-s-12">
@@ -44,7 +51,7 @@
     </section>
 
     <section class="hero">
-        <div class="container mt-4">
+        <div class="container">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-5 col-s-12">
                     <p class="txt-cafe-cursivas" style="text-align: left;">La historia</p>
@@ -94,7 +101,7 @@
                     <p class="txt-cafe-cursivas" style="text-align: right;">Visión</p>
                     <p class="textos-small" style="text-align: right;">Nuestra visión es ofrecerle a las mujeres productos de calidad, con precios accesibles y en tendencia. Procurando siempre la comodidad y estilos en cada una de nuestras prendas y accesorios con los mejores diseños representativos de la marca.</p>
                 </div>
-                <div class="col-lg-4 col-s-12 text-center">
+                <div class="col-lg-4 col-s-12 text-center" id="img-vision">
                     <img src="{{ asset('public/img/misionvision.png') }}" alt="index.php" style="width:65%;" >
                 </div>
                 <div class="col-lg-4">
