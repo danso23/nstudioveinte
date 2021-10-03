@@ -16,7 +16,7 @@
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-12 col-s-12">
-                    <p class="cursivas" style="text-align: left;">Más vendidos</p>
+                    <p class="txt-cafe-cursivas" style="text-align: left;">Más vendidos</p>
                 </div>
             </div>
         </div>
@@ -27,17 +27,17 @@
                 <div class="col-lg-6 col-s-12">
                     <div class="col-s-12 vendido01" style="text-align: left;float: left;width: 100%;">
                         <div style="background-color:#E6C8BD; width: 30%; height:310px; padding-top:80px;float:right">
-                        <p class="cursivas" style="text-align: left;">Conjunto azul y blanco</p>
+                        <p class="txt-cafe-cursivas" style="text-align: left;">Conjunto azul y blanco</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-s-12 text-center">
                     <img src="{{ asset('public/img/productos/vendido02.png') }}" alt="index.php" width="100%">
-                    <p class="cursivas" style="text-align: left;">Vestido rosado</p>
+                    <p class="txt-cafe-cursivas" style="text-align: left;">Vestido rosado</p>
                 </div>
                 <div class="col-lg-3 col-s-12 text-center">
                     <img src="{{ asset('public/img/productos/vendido03.png') }}" alt="index.php" width="100%">
-                    <p class="cursivas" style="text-align: left;">Sandalias negras</p>
+                    <p class="txt-cafe-cursivas" style="text-align: left;">Sandalias negras</p>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-5 col-s-12">
-                    <p class="cursivas" style="text-align: left;">La historia</p>
+                    <p class="txt-cafe-cursivas" style="text-align: left;">La historia</p>
                     <p class="textos-small" style="text-align: left;">Nstudioveinte.mx nace del sueño de Nicole Pichardo, una joven yucateca. El proyecto da inicio de la mano de su novio Octavio García quien juntos complementaron las ideas para poder tener un espacio acogedor en cada una de las visitas de sus clientas. La primera boutique abre sus puertas el 9 de marzo del 2019.<br><br>
                         Nuestro propósito es muy claro, brindar la mejor calidad al mejor precio, representando exclusividad e innovación en cada una de las prendas. <br><br>
                         Nosotros buscamos acercarnos a las mejores propuestas de moda, además de transmitir nuestra dedicación y nuestro cuidado por los detalles. Ofrecemos una forma diferente de combinar todas las prendas de nuestras colecciones. 
@@ -91,14 +91,14 @@
         <div class="container">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-4 col-s-12">
-                    <p class="cursivas" style="text-align: right;">Visión</p>
+                    <p class="txt-cafe-cursivas" style="text-align: right;">Visión</p>
                     <p class="textos-small" style="text-align: right;">Nuestra visión es ofrecerle a las mujeres productos de calidad, con precios accesibles y en tendencia. Procurando siempre la comodidad y estilos en cada una de nuestras prendas y accesorios con los mejores diseños representativos de la marca.</p>
                 </div>
                 <div class="col-lg-4 col-s-12 text-center">
                     <img src="{{ asset('public/img/misionvision.png') }}" alt="index.php" style="width:65%;" >
                 </div>
                 <div class="col-lg-4">
-                    <p class="cursivas" style="text-align: left;">Misión</p>
+                    <p class="txt-cafe-cursivas" style="text-align: left;">Misión</p>
                     <p class="textos-small" style="text-align: left;">Posicionarnos en el mercado Yucateco como una marca líder a nivel local y nacional con el fin de ofrecer prendas a la vanguardia con la mejor calidad y a los mejores precios.</p>
                 </div>
             </div>

@@ -42,7 +42,7 @@
             <h3 class="textos-grises">Descuentos hasta un 30% <br class="d-block d-sm-block d-md-none d-lg-none">
             <span>Consultas las bases <a href="#" class="textos-cafes">aquí</a> </span></h3>
         </div>
-        <div class="col-12 container info-nav" style="padding-left: 170px; padding-right: 170px;">
+        <div class="col-12 container info-nav">
             <div class="col-12 mrl-q">
                 <header id="site-header">
                     <!-- style="@if (Request::is('/')) padding: 0px 0px !important; @endif" -->
@@ -50,7 +50,6 @@
                         <img src="{{ asset('public/img/logo.svg') }}" class="logo-black" alt="">
                         <!-- <img src="img/logo.svg" class="logo-white" alt=""> -->
                     </a>
-                        
                     <ul class="menu-right m-0">
                         <li>
                             <a href="#" class="icon-search" data-toggle="modal" data-target="#exampleModal">
