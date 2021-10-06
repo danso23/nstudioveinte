@@ -12,6 +12,33 @@
             @endforeach
         </div>
     </section>
+    <!--start content -->
+    <section class="section-productos">
+        <div class="container">
+            @if(session()->has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session()->get('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+            <div class="row justify-content-center">
+                @foreach ($datos['productos'] as $producto)
+                <div class="col-10 col-sm-9 col-md-4 col-lg-4 producto">
+                    <img src="{{ asset('public/img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
+                    <form action="{{ route('cart.add') }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
+                        <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
+                    </form>
+                    <h5><a class="textos-cafes" href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
+                    <span class="textos-grises">$ {{ $producto->precio }}</span>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
     <section class="">
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
@@ -60,33 +87,6 @@
             </div>
         </div>
     </section>
-    <!--start content
-    <section class="section-productos">
-        <div class="container">
-            @if(session()->has('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ session()->get('success') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-            <div class="row justify-content-center">
-                @foreach ($datos['productos'] as $producto)
-                <div class="col-10 col-sm-9 col-md-4 col-lg-4 producto">
-                    <img src="{{ asset('img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
-                    <form action="{{ route('cart.add') }}" method="post">
-                        @csrf
-                        <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
-                        <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
-                    </form>
-                    <h5><a class="textos-cafes" href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
-                    <span class="textos-grises">$ {{ $producto->precio }}</span>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>-->
     <section>
         <div class="container">
             <div class="row align-items-start text-center" style="justify-content:center;">
