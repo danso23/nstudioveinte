@@ -101,7 +101,7 @@
         <footer class="site-footer">
         <div class="container">
             <div class="row align-items-start text-center" style="justify-content:center;">
-                <div class="col-8 text-center">
+                <div class="col-lg-7 col-md-7 col-12 text-center">
                     <a href=""><img src="{{ asset('public/img/logo.svg') }}" alt="index.php" class="img-fluid" ></a>
                     <p class="textos-cafes">Boutique dedicada a la venta de ropa de mujer,  donde el diseño y la tendencia tienen un espacio. </p>
                 </div>

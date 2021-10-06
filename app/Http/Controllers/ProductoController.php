@@ -150,7 +150,7 @@ class ProductoController extends Controller{
         $buscador = (isset($request->buscador) && $request->buscador != "") ? $request->buscador : '';
         $productos = Producto::where("$p.nombre_producto", "LIKE", '%'. $buscador .'%')
             ->join('categorias as c', "$p.id_categoria", 'c.id_categoria')
-            ->selectRaw("$p.id_producto, $p.id_categoria, c.nombre_categoria, $p.nombre_producto, $p.desc_producto, $p.url_imagen, $p.precio, $p.cantidad, $p.activo")
+            ->selectRaw("$p.id_producto, $p.id_categoria, c.nombre_categoria, $p.nombre_producto, $p.desc_producto, $p.url_imagen, $p.precio, $p.cantidad_s, $p.activo")
         ->get();
         $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
         $datos = array('buscador' => $productos, 'categorias' => $categorias );
