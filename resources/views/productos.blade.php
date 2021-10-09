@@ -36,7 +36,7 @@
                                             <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
                                             <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
                                         </form>
-                                        <h5 class="textos-cafes"><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
+                                        <h5 class="txt-cafe-cursivas"><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
                                         <span class="textos-grises">$ {{ $producto->precio }}</span>
                                     </div>
                                 @endforeach

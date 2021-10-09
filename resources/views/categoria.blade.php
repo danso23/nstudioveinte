@@ -65,17 +65,17 @@
                     <div class="col-12 col-sm-12 col-md-10 col-lg-10 p-0">
                         <!-- AQUI PONES LO QUE VENGA DE TU BUSCADOR -->
                         @foreach ($datos['buscador'] as $producto)
-                                    <div class="col-9 col-sm-4 col-md-4 col-lg-4 producto">
-                                        <img src="{{ asset('public/img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
-                                        <form action="{{ route('cart.add') }}" method="post">
-                                            @csrf
-                                            <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
-                                            <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
-                                        </form>
-                                        <h5><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
-                                        <span>$ {{ $producto->precio }}</span>
-                                    </div>
-                                @endforeach
+                            <div class="col-9 col-sm-4 col-md-4 col-lg-4 producto">
+                                <img src="{{ asset('public/img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
+                                <form action="{{ route('cart.add') }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
+                                    <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
+                                </form>
+                                <h5><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
+                                <span>$ {{ $producto->precio }}</span>
+                            </div>
+                        @endforeach
                     </div>
                 @endif
             </div>

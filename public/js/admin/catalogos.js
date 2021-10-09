@@ -198,7 +198,6 @@ function guardarCurso(){
 	dataform = $('#'+form[0].id).serialize();
 	dataform+="&token="+document.querySelector('meta[name="_token"]').getAttribute('content');
 	dataform+="&portadaFile="+$("#portadaFile").val();
-	;
 	$.ajax({
 		type: "POST",
     	dataType: "json",

@@ -65,7 +65,7 @@
                         </li>
                         <li>
                             <button type="button" class="toggle-menu btn-primary">
-                                <a href="" class="icon-shopping mt-5"><img src="{{ asset('public/icons/barras.svg') }}"></a>
+                                <a href="" class="icon-shopping "><img src="{{ asset('public/icons/barras.svg') }}"></a>
                             </button>
                         </li>   
                     </ul>

@@ -25,6 +25,8 @@ Route::get('home', 'ProductoController@home')->name('home');
 Route::get('categoria/{id}', 'ProductoController@productoXCategoria')->name('categoria');
 ##Buscador
 Route::get('buscador-productos', 'ProductoController@buscador')->name('buscador');
+##Productos Todos
+Route::get('json/productosall', 'ProductoController@productosAll')->name('json.productosall');
 /****FIN PRODUCTOS****/
 
 /****CATEGORIAS****/

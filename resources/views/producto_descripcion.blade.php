@@ -17,7 +17,7 @@
                         <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block">
                     </div>
                     <div class="col-12 col-md-9 option-product">
-                        <h4 class="cursivas">{{ $datos['productos']->nombre_producto }}</h4>
+                        <h4 class="txt-cafe-cursivas">{{ $datos['productos']->nombre_producto }}</h4>
                         <span class="textos-grises">${{ $datos['productos']->precio }}</span>
                         <p class="textos-grises">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur, soluta animi quasi non accusantium voluptatum laboriosam et modi quisquam perspiciatis praesentium excepturi dolor ipsum nihil. Dolorum placeat odio labore?
@@ -55,7 +55,7 @@
                     <div class="col-12 col-md-3">
                     </div>
                     <div id="detalles" class="col-12 col-md-9 info-details">
-                        <h3 class="textos-cafes" >Guía de tallas</h3><br>
+                        <h3 class="txt-cafe-cursivas" >Guía de tallas</h3><br>
                         <table class="table">
                             <thead class="textos-cafes">
                                 <tr>
@@ -100,8 +100,7 @@
                         </div>
                     </div>
                     <div id="detalles" class="col-12 col-md-9 info-details" >
-                        <h3 class="textos-cafes" >Descripción</h3>
-                        <p class="textos-grises">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ad quam reiciendis explicabo accusamus vero, blanditiis possimus tempore voluptates ratione nobis a deserunt doloremque? Omnis expedita id nesciunt repellat unde.</p>
+                        
                     </div>
                 </div>
             </div>

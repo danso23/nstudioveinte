@@ -1,4 +1,4 @@
- (function($) {
+(function($) {
 $(document).ready( function() {
     var $window = $(window);
 
@@ -19,7 +19,7 @@ $(document).ready( function() {
                 location.href = "buscador-productos?buscador=" + usuario ;
 
         }   
-       });
+    });
 
     // Menú detalles producto
     $('.details-producto .info-details:first').show();
@@ -46,8 +46,14 @@ $(document).ready( function() {
           return false;
         }
     });
+    getAllProducts();
     new WOW().init();
     site_init();
+    $('.i-categoria').on('click', function() {
+        el["Producto"].forEach(element => {
+            console.log(el["Producto"].find(x => x.id_categoria == $(this).attr('data-categoria') ) );
+        });
+    });
 });
 })(jQuery);
 
@@ -56,3 +62,17 @@ window.setTimeout(function() {
         $(this).remove(); 
     });
 }, 5000);
+
+function getAllProducts() {
+    fetch('http://localhost/nstudioveinte/json/productosall',
+        {method: 'GET'}
+    )
+    .then(res =>
+        res.json())
+        .then(r => {
+            el = [];
+            el["Producto"] = r;
+            console.log(el);
+    });
+
+}

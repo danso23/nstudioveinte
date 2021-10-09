@@ -162,4 +162,13 @@ class ProductoController extends Controller{
         $datos = array('categorias' => $categorias);
         return view('quienesSomos')->with('datos', $datos);
     }
+
+    /**
+     * Todos los productos
+     * JSON
+     */
+    function productosAll() {
+        $productos = Producto::where('activo', '1')->get();
+        return response()->json($productos);
+    }
 }
