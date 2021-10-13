@@ -20,7 +20,7 @@
                         <h4 class="txt-cafe-cursivas">{{ $datos['productos']->nombre_producto }}</h4>
                         <span class="textos-grises">${{ $datos['productos']->precio }}</span>
                         <p class="textos-grises">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur, soluta animi quasi non accusantium voluptatum laboriosam et modi quisquam perspiciatis praesentium excepturi dolor ipsum nihil. Dolorum placeat odio labore?
+                        {{$datos['productos']->desc_producto }}
                         </p>
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-5">
