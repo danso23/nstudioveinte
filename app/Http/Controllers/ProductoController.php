@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\ProductoModel AS Producto;
 use App\Models\CategoriaModel AS Categoria;
+use App\Models\Carrusel;
 use Illuminate\Support\Arr;
 use App\Http\Controllers\UtilsController AS Utils;
 use DB;
@@ -88,6 +89,22 @@ class ProductoController extends Controller{
         DB::commit();
         return Response::json($result);
     }
+
+    public function productoXCategoriaJson($id){
+        $productos = Producto::join('categorias', 'productos.id_categoria', 'categorias.id_categoria')
+        ->selectRaw('productos.id_producto, categorias.nombre_categoria, productos.nombre_producto, productos.desc_producto, productos.url_imagen, productos.precio, productos.cantidad_s, productos.cantidad_m, productos.cantidad_g, productos.busto_s, productos.busto_m, productos.busto_g, productos.largo_s, productos.largo_m, productos.largo_g, productos.manga_s, productos.manga_m, productos.manga_g')
+        ->where('productos.id_categoria', $id)
+        ->where('productos.activo', 1)
+        ->get();
+        $utils = new Utils();
+        foreach($productos as $producto){
+            $monedaConvertida = $utils->convertCurrency($producto->precio);//$this->convertCurrency($producto->precio);
+            $producto->precio = $monedaConvertida;
+        }
+        $productos;
+        return Response::json($productos);
+        
+    }
     /******FIN SECCIÓN ADMINISTRADO******/
     public function index(){
     	$productos = Producto::where('activo', '1')->get();
@@ -97,19 +114,20 @@ class ProductoController extends Controller{
             $monedaConvertida = $utils->convertCurrency($producto->precio);//$this->convertCurrency($producto->precio);
             $producto->precio = $monedaConvertida;
         }
-        $datos = array('productos' => $productos, 'categorias' => $categorias );
+        $datos = array('productos' => $productos, 'categorias' => $categorias);
     	return view('productos')->with('datos', $datos);
     }
 
     public function home(){
     	$productos = Producto::where('activo', '1')->take(3)->get();
         $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
+        $carrusel = Carrusel::where('activo', '1')->get();
         $utils = new Utils();
         foreach($productos as $producto){
             $monedaConvertida = $utils->convertCurrency($producto->precio);//$this->convertCurrency($producto->precio);
             $producto->precio = $monedaConvertida;
         }
-        $datos = array('productos' => $productos, 'categorias' => $categorias);
+        $datos = array('productos' => $productos, 'categorias' => $categorias, 'carrusel' => $carrusel);
     	return view('home')->with('datos', $datos);
     }
 

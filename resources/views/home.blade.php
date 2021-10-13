@@ -3,48 +3,44 @@
 @section('content')
     <!--start content-->
     <section class="hero" id="div-principal">
-        <div class="container">
+        
             <div id="home" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
-                    <li data-target="#home" data-slide-to="0" class="active"></li>
-                    <li data-target="#home" data-slide-to="1"></li>
-                    <li data-target="#home" data-slide-to="2"></li>
+                    @foreach($datos['carrusel'] as $caru)
+                        <li data-target="#home" data-slide-to="{{$caru->id_carrusel}}"></li>
+                    @endforeach
                 </ul>
                 <!-- The slideshow -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="la.jpg" alt="Los Angeles" width="1100" height="500">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="chicago.jpg" alt="Chicago" width="1100" height="500">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="ny.jpg" alt="New York" width="1100" height="500">
-                    </div>
+                    @foreach($datos['carrusel'] as $caru)
+                        <div class="carousel-item @if($caru->id_carrusel == 1) active @endif">
+                            <img src="{{asset('public/carrusel')}}/{{$caru->url}}" alt="{{$caru->descripcion}}" style="width:100%">
+                        </div>
+                    @endforeach
                 </div>
                 <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <a class="carousel-control-prev" href="#home" data-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
+                <a class="carousel-control-next" href="#home" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
             </div>
 
-            <div class="row align-items-start text-center" style="justify-content:center;">
+            <!-- <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-4 text-center" id="texto-principal">
                     <p id="cafes-principal">Nueva colección<p class="txt-cafe-cursivas" id="texto-exclusiva">exclusiva</p></p>
                     <button type="" class="btn btn-pink btn-add-sp" id="btn-principal">IR A TIENDA</button>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        
     </section>
     <section class="">
-        <div class="col-12 text-center mt-3">
+        <div class="col-12 text-center mt-0">
             @foreach($datos['categorias'] as $cat)
                 <div class="d-inline">
-                    <a href="#" data-categoria="{{$cat->id_categoria}}" class="a-menu i-categoria" style="padding: 5px;"><span class="textos-cafes">{{ $cat->nombre_categoria }}</span></a>
+                    <a data-categoria="{{$cat->id_categoria}}" onclick="cargarCategoria({{$cat->id_categoria}});" class="a-menu i-categoria" style="padding: 5px;"><span class="textos-cafes">{{ $cat->nombre_categoria }}</span></a>
                 </div>
             @endforeach
         </div>
@@ -141,4 +137,9 @@
             </div>
         </div>
     </section>   
+@endsection
+@section('script')
+<script>
+	var url_global = "{{ url('') }}";
+</script>
 @endsection

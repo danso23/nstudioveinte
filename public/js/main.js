@@ -49,11 +49,6 @@ $(document).ready( function() {
     getAllProducts();
     new WOW().init();
     site_init();
-    $('.i-categoria').on('click', function() {
-        el["Producto"].forEach(element => {
-            console.log(el["Producto"].find(x => x.id_categoria == $(this).attr('data-categoria') ) );
-        });
-    });
 });
 })(jQuery);
 
@@ -75,4 +70,34 @@ function getAllProducts() {
             console.log(el);
     });
 
+}
+
+function cargarCategoria(id) {
+    $.ajax({
+		type: "GET",
+    	dataType: "json",
+    	url: url_global+"/jsoncategoria/"+id,		
+		success: function(data){
+			alert(id);
+		},
+		error: function (jqXHR, exception){
+			var msg = '';
+			if (jqXHR.status === 0)
+				msg = 'Not connect.\n Verify Network.';
+			else if (jqXHR.status == 404)
+				msg = 'Requested page not found. [404]';
+			else if (jqXHR.status == 500)
+				msg = 'Internal Server Error [500].';
+			else if (exception === 'parsererror')
+				msg = 'Requested JSON parse failed.';
+			else if (exception === 'timeout')
+				msg = 'Time out error.';
+			else if (exception === 'abort')
+				msg = 'Se aborto el proceso.';
+			else
+				msg = 'Uncaught Error.\n' + jqXHR.responseText;
+			console.log(msg);
+			alert("Ocurrio un error[1]")
+		}
+	});
 }
