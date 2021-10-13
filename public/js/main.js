@@ -73,12 +73,25 @@ function getAllProducts() {
 }
 
 function cargarCategoria(id) {
+    var html="";
     $.ajax({
 		type: "GET",
     	dataType: "json",
     	url: url_global+"/jsoncategoria/"+id,		
 		success: function(data){
-			alert(id);
+            data.forEach(element => {                            
+                html+='<div class="col-10 col-sm-9 col-md-4 col-lg-4 producto">';
+                html+='<img src="'+url_global+'/public/img/productos/'+element.url_imagen+'" alt="" class="2-100" width="100%"></img>';
+                html+='<form action="'+url_global+'/cart-add" method="post">';
+                html+='<input type="hidden" name="_token" value="'+document.querySelector('meta[name="_token"]').getAttribute('content')+'">';
+                html+='<button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>';
+                html+='<input type="hidden" name="id_producto" value="'+element.id_producto+'">';           
+                html+='</form>';
+                html+='<h5><a class="textos-cafes" href="'+url_global+'/productos/detalle $producto->id_producto ">'+element.nombre_producto+'</a></h5>';
+                html+='<span class="textos-grises">$ '+element.precio+'</span>';
+                html+='</div>';
+            });
+            $("#div_Productos").html(html);
 		},
 		error: function (jqXHR, exception){
 			var msg = '';

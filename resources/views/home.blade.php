@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('css')
+	<meta name="_token" content="{{ csrf_token() }}">
+@endsection
 @section('content')
     <!--start content-->
     <section class="hero" id="div-principal">
@@ -57,18 +60,7 @@
                 </div>
             @endif
             <div class="row justify-content-center" id="div_Productos">
-                @foreach ($datos['productos'] as $producto)
-                <div class="col-10 col-sm-9 col-md-4 col-lg-4 producto">
-                    <img src="{{ asset('public/img/productos')}}/{{ $producto->url_imagen }}" alt="" class="2-100" width="100%">
-                    <form action="{{ route('cart.add') }}" method="post">
-                        @csrf
-                        <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
-                        <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
-                    </form>
-                    <h5><a class="textos-cafes" href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
-                    <span class="textos-grises">$ {{ $producto->precio }}</span>
-                </div>
-                @endforeach
+                
             </div>
         </div>
     </section>
