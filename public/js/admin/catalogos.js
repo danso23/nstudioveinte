@@ -58,6 +58,11 @@ function dataCurso() {
                         "<th>Producto</th>"+
                         "<th>Descripción</th>"+
 						"<th>Portada</th>"+
+						"<th>Imagen 2</th>"+
+						"<th>Imagen 3</th>"+
+						"<th>Imagen 4</th>"+
+						"<th>Imagen 5</th>"+
+						"<th>Imagen 6</th>"+
                         "<th>Precio</th>"+
 						"<th>Cantidad S</th>"+
                         "<th>Acciones</th>"+
@@ -90,6 +95,11 @@ function dataCurso() {
 					"<td>"+el.nombre_producto+"</td>"+
 					"<td>"+el.desc_producto+"</td>"+
 					"<td>"+el.url_imagen+"</td>"+
+					"<td>"+el.url_imagen2+"</td>"+
+					"<td>"+el.url_imagen3+"</td>"+
+					"<td>"+el.url_imagen4+"</td>"+
+					"<td>"+el.url_imagen5+"</td>"+
+					"<td>"+el.url_imagen6+"</td>"+
 					"<td>$ "+el.precio+"</td>"+
 					"<td>"+el.cantidad_s+"</td>"+
 					"<td>"+
