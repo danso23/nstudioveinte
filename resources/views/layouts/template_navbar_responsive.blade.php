@@ -7,7 +7,7 @@
                     <ul class="category-hero" class="menu">
                         @isset($datos['categorias'])
                             @foreach ($datos['categorias'] as $categoria)
-                                <li style="list-style:none"><a class="textos-cafes" href="{{ url('/categoria') }}/{{ $categoria->id_categoria}}">{{ $categoria->nombre_categoria }}</a></li>
+                                <li style="list-style:none"><a class="textos-cafes" style="font-family: Playfair Display !important; font-size: 22px;" href="{{ url('/categoria') }}/{{ $categoria->id_categoria}}">{{ $categoria->nombre_categoria }}</a></li>
                             @endforeach
                         @endisset
                     </ul>

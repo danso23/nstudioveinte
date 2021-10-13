@@ -13,12 +13,6 @@
                 </div>
             @endif
             <div class="row justify-content-center mrl-q">
-                <div class="col-md-2 col-lg-2 d-none d-sm-none d-md-block d-lg-block p-0 text-right content-category">
-                    <div class="col-12 info text-left">
-                        <p>Envíos gratuitos en compras superiores a $999</p>
-                        <p class="m-0">Debido a las medidas actuales para proteger la seguridad de los empleados de nuestro centro de distribución con motivos del COVID-19, las entregas pueden presentar un retraso. Puedes consultar el estatus de tu pedido <a href="#">aquí</a>.</p>
-                    </div>
-                </div>
                 @if(isset($datos['productos']))
                     <div class="col-12 col-sm-12 col-md-10 col-lg-10 p-0">
                         <div class="container">
@@ -31,7 +25,7 @@
                                             <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
                                             <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
                                         </form>
-                                        <h5 class="textos-cafes"><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
+                                        <h5 class="txt-cafe-cursivas"><a class="txt-cafe-cursivas" href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
                                         <span class="textos-grises">$ {{ $producto->precio }}</span>
                                     </div>
                                 @endforeach
