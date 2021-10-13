@@ -1389,7 +1389,7 @@ ul.menu-details li a.activo::after{
 
 #div-principal{
   /* background-image: url('../img/banner.png'); */
-  height: 520px;
+  /* height: 520px; */
   background-size: cover;
   background-position: center;
 }
@@ -1469,4 +1469,9 @@ input[type=number] { -moz-appearance:textfield; }
 .vendido01{
   background-image: url('../img/productos/vendido01.png');
   background-size: cover;
+}
+
+.i-categoria:hover, .i-categoria:hover span { 
+  cursor: pointer;
+  text-decoration: underline;
 }

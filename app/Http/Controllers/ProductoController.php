@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\ProductoModel AS Producto;
 use App\Models\CategoriaModel AS Categoria;
+use App\Models\Carrusel;
 use Illuminate\Support\Arr;
 use App\Http\Controllers\UtilsController AS Utils;
 use DB;
@@ -97,19 +98,20 @@ class ProductoController extends Controller{
             $monedaConvertida = $utils->convertCurrency($producto->precio);//$this->convertCurrency($producto->precio);
             $producto->precio = $monedaConvertida;
         }
-        $datos = array('productos' => $productos, 'categorias' => $categorias );
+        $datos = array('productos' => $productos, 'categorias' => $categorias);
     	return view('productos')->with('datos', $datos);
     }
 
     public function home(){
     	$productos = Producto::where('activo', '1')->take(3)->get();
         $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
+        $carrusel = Carrusel::where('activo', '1')->get();
         $utils = new Utils();
         foreach($productos as $producto){
             $monedaConvertida = $utils->convertCurrency($producto->precio);//$this->convertCurrency($producto->precio);
             $producto->precio = $monedaConvertida;
         }
-        $datos = array('productos' => $productos, 'categorias' => $categorias);
+        $datos = array('productos' => $productos, 'categorias' => $categorias, 'carrusel' => $carrusel);
     	return view('home')->with('datos', $datos);
     }
 

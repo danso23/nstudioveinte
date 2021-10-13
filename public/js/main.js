@@ -49,11 +49,6 @@ $(document).ready( function() {
     getAllProducts();
     new WOW().init();
     site_init();
-    $('.i-categoria').on('click', function() {
-        el["Producto"].forEach(element => {
-            console.log(el["Producto"].find(x => x.id_categoria == $(this).attr('data-categoria') ) );
-        });
-    });
 });
 })(jQuery);
 
@@ -75,4 +70,8 @@ function getAllProducts() {
             console.log(el);
     });
 
+}
+
+function cargarCategoria(id) {
+    alert(id);
 }
