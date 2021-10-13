@@ -73,5 +73,43 @@ function getAllProducts() {
 }
 
 function cargarCategoria(id) {
-    alert(id);
+    var html="";
+    $.ajax({
+		type: "GET",
+    	dataType: "json",
+    	url: url_global+"/jsoncategoria/"+id,		
+		success: function(data){
+            data.forEach(element => {                            
+                html+='<div class="col-10 col-sm-9 col-md-2 col-lg-2 producto">';
+                html+='<img src="'+url_global+'/public/img/productos/'+element.url_imagen+'" alt="" class="2-100" width="100%"></img>';
+                html+='<form action="'+url_global+'/cart-add" method="post">';
+                html+='<input type="hidden" name="_token" value="'+document.querySelector('meta[name="_token"]').getAttribute('content')+'">';
+                html+='<button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>';
+                html+='<input type="hidden" name="id_producto" value="'+element.id_producto+'">';           
+                html+='</form>';
+                
+                html+='</div>';
+            });
+            $("#div_Productos").html(html);
+		},
+		error: function (jqXHR, exception){
+			var msg = '';
+			if (jqXHR.status === 0)
+				msg = 'Not connect.\n Verify Network.';
+			else if (jqXHR.status == 404)
+				msg = 'Requested page not found. [404]';
+			else if (jqXHR.status == 500)
+				msg = 'Internal Server Error [500].';
+			else if (exception === 'parsererror')
+				msg = 'Requested JSON parse failed.';
+			else if (exception === 'timeout')
+				msg = 'Time out error.';
+			else if (exception === 'abort')
+				msg = 'Se aborto el proceso.';
+			else
+				msg = 'Uncaught Error.\n' + jqXHR.responseText;
+			console.log(msg);
+			alert("Ocurrio un error[1]")
+		}
+	});
 }

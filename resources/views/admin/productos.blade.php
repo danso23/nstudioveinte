@@ -48,9 +48,34 @@
 							<textarea name="desc_curso" id="desc_curso" class="form-control" required></textarea>
 						</div>
 						<div class="form-group">
-							<label for="portada" class="textos-cafes">Imagen</label>
+							<label for="portada" class="textos-cafes">Imagen principal</label>
 							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
 							<input type="hidden" name="portadaFile" id="portadaFile">
+						</div>
+						<div class="form-group">
+							<label for="portada" class="textos-cafes">Imagen 2</label>
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="hidden" name="portadaFile2" id="portadaFile2">
+						</div>
+						<div class="form-group">
+							<label for="portada" class="textos-cafes">Imagen 3</label>
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="hidden" name="portadaFile3" id="portadaFile3">
+						</div>
+						<div class="form-group">
+							<label for="portada" class="textos-cafes">Imagen 4</label>
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="hidden" name="portadaFile4" id="portadaFile4">
+						</div>
+						<div class="form-group">
+							<label for="portada" class="textos-cafes">Imagen 5</label>
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="hidden" name="portadaFile5" id="portadaFile5">
+						</div>
+						<div class="form-group">
+							<label for="portada" class="textos-cafes">Imagen 6</label>
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="hidden" name="portadaFile6" id="portadaFile6">
 						</div>
 						<div class="form-group">
 							<label for="precio" class="textos-cafes">Precio</label>

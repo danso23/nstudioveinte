@@ -55,6 +55,11 @@ class ProductoController extends Controller{
                 $producto->nombre_producto = $request->nombre;
                 $producto->desc_producto = $request->desc_curso;
                 $producto->url_imagen = $request->portadaFile;
+                $producto->url_imagen2 = $request->portadaFile2;
+                $producto->url_imagen3 = $request->portadaFile3;
+                $producto->url_imagen4 = $request->portadaFile4;
+                $producto->url_imagen5 = $request->portadaFile5;
+                $producto->url_imagen6 = $request->portadaFile6;
                 $producto->id_categoria = $request->categoria;
                 $producto->precio = $request->precio;
                 $producto->cantidad_s = $request->cantidad_s;
@@ -88,6 +93,22 @@ class ProductoController extends Controller{
         }
         DB::commit();
         return Response::json($result);
+    }
+
+    public function productoXCategoriaJson($id){
+        $productos = Producto::join('categorias', 'productos.id_categoria', 'categorias.id_categoria')
+        ->selectRaw('productos.id_producto, categorias.nombre_categoria, productos.nombre_producto, productos.desc_producto, productos.url_imagen, productos.precio, productos.cantidad_s, productos.cantidad_m, productos.cantidad_g, productos.busto_s, productos.busto_m, productos.busto_g, productos.largo_s, productos.largo_m, productos.largo_g, productos.manga_s, productos.manga_m, productos.manga_g')
+        ->where('productos.id_categoria', $id)
+        ->where('productos.activo', 1)
+        ->get();
+        $utils = new Utils();
+        foreach($productos as $producto){
+            $monedaConvertida = $utils->convertCurrency($producto->precio);//$this->convertCurrency($producto->precio);
+            $producto->precio = $monedaConvertida;
+        }
+        $productos;
+        return Response::json($productos);
+        
     }
     /******FIN SECCIÓN ADMINISTRADO******/
     public function index(){
