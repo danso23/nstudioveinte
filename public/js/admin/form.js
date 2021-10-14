@@ -1,7 +1,7 @@
 var messageResponse= $('#processData'),
     textErrorRecaptcha = '<div class="error">Por favor selecciona el código de verificación humana</div>';
 
-function uploadFile(el){//Funcion encargada de enviar el archivo via AJAX
+function uploadFile(el, id){//Funcion encargada de enviar el archivo via AJAX
     debugger
     var inputFileImage = document.getElementById(el.id);
     var file = inputFileImage.files[0];
@@ -18,7 +18,7 @@ function uploadFile(el){//Funcion encargada de enviar el archivo via AJAX
         processData:false,
         success: function(data) {
             if(data != "")
-                $("#"+el.id).val(data.name);
+                $("#"+id).val(data.name);
         }
     });   
 }
