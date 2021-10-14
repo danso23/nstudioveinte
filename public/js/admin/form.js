@@ -2,7 +2,7 @@ var messageResponse= $('#processData'),
     textErrorRecaptcha = '<div class="error">Por favor selecciona el código de verificación humana</div>';
 
 function uploadFile(el){//Funcion encargada de enviar el archivo via AJAX
-    debugger
+    
     var inputFileImage = document.getElementById(el.id);
     var file = inputFileImage.files[0];
     var data = new FormData();
