@@ -54,27 +54,27 @@
 						</div>
 						<div class="form-group">
 							<label for="portada" class="textos-cafes">Imagen 2</label>
-							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portadaFile2" id="portadaFile2" onchange="uploadFile(this)">
 							<input type="hidden" name="portadaFile2" id="portadaFile2">
 						</div>
 						<div class="form-group">
 							<label for="portada" class="textos-cafes">Imagen 3</label>
-							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portadaFile3" id="portadaFile3" onchange="uploadFile(this)">
 							<input type="hidden" name="portadaFile3" id="portadaFile3">
 						</div>
 						<div class="form-group">
 							<label for="portada" class="textos-cafes">Imagen 4</label>
-							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portadaFile4" id="portada" onchange="uploadFile(this)">
 							<input type="hidden" name="portadaFile4" id="portadaFile4">
 						</div>
 						<div class="form-group">
 							<label for="portada" class="textos-cafes">Imagen 5</label>
-							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portadaFile5" id="portadaFile5" onchange="uploadFile(this)">
 							<input type="hidden" name="portadaFile5" id="portadaFile5">
 						</div>
 						<div class="form-group">
 							<label for="portada" class="textos-cafes">Imagen 6</label>
-							<input type="file" class="form-control custom-input" placeholder="Portada" name="portada" id="portada" onchange="uploadFile(this)">
+							<input type="file" class="form-control custom-input" placeholder="Portada" name="portadaFile6" id="portadaFile6" onchange="uploadFile(this)">
 							<input type="hidden" name="portadaFile6" id="portadaFile6">
 						</div>
 						<div class="form-group">
