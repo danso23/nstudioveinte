@@ -43,7 +43,8 @@
         <div class="col-12 text-center mt-0">
             @foreach($datos['categorias'] as $cat)
                 <div class="d-inline">
-                    <a data-categoria="{{$cat->id_categoria}}" onclick="cargarCategoria({{$cat->id_categoria}});" class="a-menu i-categoria" style="padding: 5px;"><span class="textos-cafes" style="font-family: Playfair Display !important;">{{ $cat->nombre_categoria }}</span></a>
+                    <a data-categoria="{{$cat->id_categoria}}" onclick="cargarCategoria({{$cat->id_categoria}});" class="a-menu i-categoria" style="padding: 5px;">
+                    <img class="img-fluid img-icons" src="{{ asset('/public/img/categorias/') }}/{{ $cat->icono }}"><span class="textos-cafes" style="font-family: Playfair Display !important;">{{ $cat->nombre_categoria }}</span></a>
                 </div>
             @endforeach
         </div>
