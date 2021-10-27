@@ -62,3 +62,5 @@ Route::group(['prefix' => 'admin'], function() {
     /** GUARDADO**/
     Route::post('/storeProducto/{id}', 'ProductoController@storeProducto')->name('admin.storeProducto');
 });
+
+Route::get('/historia', 'HomeController@historia')->name('historia');
