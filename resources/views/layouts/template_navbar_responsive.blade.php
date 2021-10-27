@@ -17,7 +17,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <li style="list-style:none"><a class="textos-cafes" style="font-family: Playfair Display !important; font-size: 22px;" href="">Nuestra historia</a></li>
+                        <li style="list-style:none"><a class="textos-cafes" style="font-family: Playfair Display !important; font-size: 22px;" href="{{ route('historia') }}">Nuestra historia</a></li>
                         <li style="list-style:none"><a class="textos-cafes" style="font-family: Playfair Display !important; font-size: 22px;" href="">Contacto</a></li>
                     </ul>
                 </ul>
