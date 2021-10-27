@@ -7,14 +7,16 @@
                     <ul class="category-hero" class="menu">
                         <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
                             <li class="nav-item dropdown">
-                            <a class="textos-cafes nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Playfair Display !important; font-size: 22px;" href="">Tienda</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                @isset($datos['categorias'])
-                                    @foreach ($datos['categorias'] as $categoria)
-                                        <li style="list-style:none"><a class="textos-cafes" style="font-family: Playfair Display !important; font-size: 18px;" href="{{ url('/categoria') }}/{{ $categoria->id_categoria}}">{{ $categoria->nombre_categoria }}</a></li>
-                                    @endforeach
-                                @endisset
-                                </ul>
+                                <a class="navbar-toggler textos-cafes" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="font-family: Playfair Display !important; font-size: 22px;">Tienda</a>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav">
+                                    @isset($datos['categorias'])
+                                        @foreach ($datos['categorias'] as $categoria)
+                                            <li style="list-style:none"><a class="textos-cafes nav-item" style="font-family: Playfair Display !important; font-size: 18px;" href="{{ url('/categoria') }}/{{ $categoria->id_categoria}}">{{ $categoria->nombre_categoria }}</a></li>
+                                        @endforeach
+                                    @endisset
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                         <li style="list-style:none"><a class="textos-cafes" style="font-family: Playfair Display !important; font-size: 22px;" href="">Nuestra historia</a></li>
