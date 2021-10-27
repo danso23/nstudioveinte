@@ -1410,7 +1410,7 @@ ul.menu-details li a.activo::after{
 @media (max-width: 768px) {
   #div-principal{
     /* background-image: url('../img/banner.png'); */
-    height: 180px;
+    /* height: 180px; */
     background-size: cover;
     background-position: center;
   }
@@ -1440,7 +1440,7 @@ ul.menu-details li a.activo::after{
 }
 
 .img-icons {
-  max-width: 8%;
+  max-width: 3%;
   height: auto;
 }
 

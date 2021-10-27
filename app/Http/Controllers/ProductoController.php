@@ -74,6 +74,7 @@ class ProductoController extends Controller{
                 $producto->manga_s = $request->manga_s;
                 $producto->manga_m = $request->manga_m;
                 $producto->manga_g = $request->manga_g;
+                $producto->color = $request->color;
                 $producto->activo = 1;
                 $producto->save();
                 $result = array(
@@ -125,7 +126,7 @@ class ProductoController extends Controller{
 
     public function home(){
     	$productos = Producto::where('activo', '1')->take(3)->get();
-        $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
+        $categorias = Categoria::where('activo', '1')->selectRaw('id_categoria, nombre_categoria, icono')->get();
         $carrusel = Carrusel::where('activo', '1')->get();
         $utils = new Utils();
         foreach($productos as $producto){
