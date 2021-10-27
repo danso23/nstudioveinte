@@ -63,4 +63,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/storeProducto/{id}', 'ProductoController@storeProducto')->name('admin.storeProducto');
 });
 
-Route::get('/historia', 'HomeController@historia')->name('historia');
+Route::get('/historia', 'ProductoController@historia')->name('historia');

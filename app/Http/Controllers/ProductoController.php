@@ -195,4 +195,8 @@ class ProductoController extends Controller{
         $productos = Producto::where('activo', '1')->get();
         return response()->json($productos);
     }
+
+    public function historia(){
+        return view('historia');
+    }
 }
