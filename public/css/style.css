@@ -1377,12 +1377,18 @@ ul.menu-details li a.activo::after{
   font-size: 25px;
 }
 
+.textos-pagos{
+  color: #B97232 !important;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
 .textos-grises{
   color: #938079 !important;
 }
 
-.btn-pink{
-  background-color: #E6C8BD;
+.btn-cafe{
+  background-color: #B97232;
   color: white;
   border-radius: 40px;
 }

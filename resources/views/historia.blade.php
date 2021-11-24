@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 
-    <section class="hero">
+<section class="hero">
         <div class="container">
             <div class="row align-items-start text-center" style="justify-content:center;">
                 <div class="col-lg-5 col-s-12">

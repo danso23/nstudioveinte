@@ -104,7 +104,7 @@
                                     </div>
                             </div>
                             <div class="card-footer text-muted">
-                                <button type="submit" class="btn btn-pink">Finalizar compra</button>
+                                <button type="submit" class="btn btn-cafe">Finalizar compra</button>
                             </div>
                         </div>
                     </form>
