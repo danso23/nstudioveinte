@@ -191,7 +191,7 @@ a.btn-more:after {
   outline: none;
   padding: 0px;
   width: 25px;
-  height: 22px;
+  height: 18px;
 }
 
 #site-header .toggle-menu .icon-bar {
@@ -1388,6 +1388,7 @@ ul.menu-details li a.activo::after{
 
 .texto-precio{
   font-family: 'Poppins', serif;
+  font-size: 22px;
 }
 .textos-pagos{
   color: #B97232 !important;
