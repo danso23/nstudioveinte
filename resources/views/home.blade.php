@@ -68,8 +68,11 @@
     <section class="">
         <div class="container mt-4">
             <div class="row align-items-start text-center" style="justify-content:center;">
-                <div class="col-lg-12 col-s-12">
-                    <p class="txt-cafe-cursivas" style="text-align: left;">Más vendidos</p>
+                <div class="col-lg-6 col-s-6">
+                    <p class="text-left txt-cafe-cursivas">Más vendidos</p>
+                </div>
+                <div class="col-lg-6 col-s-6 text-right">
+                    <button class="btn btn-cafe">IR A TIENDA</button>
                 </div>
             </div>
         </div>
@@ -81,7 +84,7 @@
                     <div class="col-s-12 vendido01" style="text-align: left;float: left;width: 100%;">
                         <div style="background-color:#E6C8BD; width: 30%; height:310px; padding-top:100px;float:right">
                         <p class="txt-cafe" style="text-align: left; padding-left:8px">Conjunto azul y blanco</p>
-                        <p class="p-3 text-light text-right texto-precio fa-2x">$950</p>
+                        <p class="p-3 text-light text-right texto-precio">$950</p>
                         </div>
                     </div>
                 </div>
