@@ -25,10 +25,10 @@
                             <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block img-prod">
                             </div>
                             <div class="carousel-item">
-                            <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block img-prod">
+                            <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen2 }}" alt="" class="mx-auto d-block img-prod">
                             </div>
                             <div class="carousel-item">
-                            <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block img-prod">
+                            <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen3 }}" alt="" class="mx-auto d-block img-prod">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -49,7 +49,7 @@
                         {{$datos['productos']->desc_producto }}
                         </p>
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-5">
+                         {{--<div class="col-12 col-sm-12 col-md-5">
                                 <div class="form-group col-12 col-md-11 p-md-0">
                                     <select id="inputState" class="form-control textos-small">
                                         <option selected>Color</option>
@@ -57,6 +57,7 @@
                                     </select>
                                 </div>
                             </div>
+                            --}}
                             <div class="col-12 col-sm-12 col-md-6">
                                 <div class="form-group col-12 col-md-12">
                                     <select id="inputState" class="form-control textos-small">
