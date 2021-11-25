@@ -36,14 +36,14 @@
                                             <button type="submit" class="btn btn-pink btn-add-sp">Añadir al carrito</button>
                                             <input type="hidden" name="id_producto" value="{{ $producto->id_producto }}">
                                         </form>
-                                        <h5 class="txt-cafe-cursivas"><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
-                                        <span class="textos-grises">$ {{ $producto->precio }}</span>
+                                        <h5 class="txt-cafe"><a href="{{ url('productos/detalle') }}/{{ $producto->id_producto }}">{{ $producto->nombre_producto }}</a></h5>
+                                        <span class="textos-small-pink">$ {{ $producto->precio }}</span>
                                     </div>
                                 @endforeach
                             </div>
                             <div class="row pag-pro justify-content-center">
                                 <div class="col-10 col-sm-3 text-center text-sm-left pag-prev">
-                                    <a href="#" class="textos-grises">Anterior</a>
+                                    <a href="#" class="textos-small">Anterior</a>
                                 </div>
                                 <div class="col-10 col-sm-6 text-center pro-pagination">
                                     <div class="col-12 text-center">
@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                                 <div class="col-10 col-sm-3 text-center text-sm-right pag-next">
-                                    <a href="#" class="textos-grises">Siguiente</a>
+                                    <a href="#" class="textos-small">Siguiente</a>
                                 </div>
                             </div>
                         </div>
