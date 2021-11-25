@@ -1028,12 +1028,16 @@ a.btn-more:after {
   padding: 3% 0 5% 0;
 }
 
+.img-prod{
+  height: 400px;
+}
+
 .description .product{
   padding: 0 0 5% 0;
 }
 
 .description .img-desc img{
-  width: 100%;
+  width: 50%;
 }
 
 .description .option-product h4{
