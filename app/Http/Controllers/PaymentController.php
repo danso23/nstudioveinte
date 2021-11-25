@@ -20,9 +20,10 @@ class PaymentController extends Controller
 
     /** OXXO PAY **/
     public function paymentIntent(Request $request){
+        $total = \Cart::getTotal();
         $stripe = Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $intent = \Stripe\PaymentIntent::create([
-            "amount" => 40000,
+            "amount" => $total * 100,
             "currency" => "mxn",
             "payment_method_types" => ["oxxo"]
         ]);

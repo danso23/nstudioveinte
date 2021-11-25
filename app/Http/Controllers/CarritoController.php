@@ -11,7 +11,7 @@ class CarritoController extends Controller{
     public function agregar(Request $request){
         //print_r(csrf_token());
         
-        $producto = ProductoModel::find($request->id);
+        /*$producto = ProductoModel::find($request->id);
         if($request->cantidad > $producto->cantidad){
             return response()->json(["messagge" => "No se encuentran disponible $producto->nombre_producto, actualmente se encuentran $producto->cantidad en stock"]);
             return false;
@@ -23,6 +23,6 @@ class CarritoController extends Controller{
         $carrito->cantidad              = $request->cantidad;
         $carrito->save();
         
-        return response()->json(["messagge" => "Se agrego $producto->nombre_producto al carrito"]);
+        return response()->json(["messagge" => "Se agrego $producto->nombre_producto al carrito"]);*/
     }
 }
