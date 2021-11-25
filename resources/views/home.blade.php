@@ -72,7 +72,7 @@
                     <p class="text-left txt-cafe-cursivas">Más vendidos</p>
                 </div>
                 <div class="col-lg-6 col-s-6 text-right">
-                    <button class="btn btn-cafe">IR A TIENDA</button>
+                    <a class="btn btn-cafe" href="{{ url('/categoria/1') }}">IR A TIENDA</a>
                 </div>
             </div>
         </div>
