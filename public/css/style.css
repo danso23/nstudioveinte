@@ -1454,7 +1454,7 @@ ul.menu-details li a.activo::after{
   background-color: #B97232 !important;
   color: white;
   border: #B97232 !important;
-  border-radius: 40px;
+  border-radius: 5px;
 }
 
 .img-icons {

@@ -87,8 +87,8 @@
                         </div>
                         <div class="row" style="justify-content: center">
                             <div class="col-6">
-                                <div class="form-control total btn btn-danger">
-                                    Total: <span class="amount font-weight-bold textos-grises"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
+                                <div class="form-control">
+                                    <label class="textos-pagos">Total:&nbsp;</label><span class="amount font-weight-bold textos-pagos"><input type="hidden" name="total" id="total" value=" {{ Cart::getTotal() }}">${{ Cart::getTotal() }}</span>
                                 </div>
                             </div>
                         </div>
