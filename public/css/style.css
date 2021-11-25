@@ -1361,13 +1361,21 @@ ul.menu-details li a.activo::after{
 }
 
 .textos-small{
-  font-family: 'Poppins';
+  font-family: 'Poppins' !important;
   font-size: 12px;
   line-height: 20px;
+  color: black !important;
 }
 
 .textos-cafes{
   color: #B97232 !important;
+  font-family: 'Poppins';
+}
+
+.textos-blancos{
+  color: white !important;
+  font-size: 12px !important;
+  font-family: 'Poppins' !important;
 }
 
 .txt-cafe-cursivas{
@@ -1377,7 +1385,7 @@ ul.menu-details li a.activo::after{
   font-size: 25px;
 }
 .txt-cafe{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   color: #B97232 !important;
   font-size: 25px;
 }
@@ -1396,8 +1404,15 @@ ul.menu-details li a.activo::after{
   font-family: 'Poppins';
 }
 
+.textos-small-pink{
+  color: #E6C8BD !important;
+  font-size: 16px !important;
+  font-family: 'Poppins';
+}
+
 .textos-grises{
   color: #938079 !important;
+  font-family: 'Poppins';
 }
 
 .btn-cafe{
@@ -1454,12 +1469,24 @@ ul.menu-details li a.activo::after{
 .btn-cafe{
   background-color: #B97232 !important;
   color: white;
+  font-size: 14px;
+  font-family: 'Poppins';
+  padding: 5px 30px;
   border: #B97232 !important;
-  border-radius: 5px;
+  border-radius: 40px;
+}
+.btn-pink{
+  background-color: #E6C8BD !important;
+  color: white;
+  font-size: 14px;
+  font-family: 'Poppins';
+  padding: 5px 30px;
+  border: #E6C8BD !important;
+  border-radius: 40px;
 }
 
 .img-icons {
-  max-width: 3%;
+  max-width: 10%;
   height: auto;
 }
 

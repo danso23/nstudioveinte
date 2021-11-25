@@ -101,9 +101,9 @@
         <footer class="site-footer">
         <div class="container">
             <div class="row align-items-start text-center" style="justify-content:center;">
-                <div class="col-lg-7 col-md-7 col-12 text-center">
+                <div class="col-lg-6 col-md-6 col-12 text-center">
                     <a href=""><img src="{{ asset('public/img/logo.svg') }}" alt="index.php" class="img-fluid" ></a>
-                    <p class="textos-cafes">Boutique dedicada a la venta de ropa de mujer,  donde el diseño y la tendencia tienen un espacio. </p>
+                    <p class="textos-pagos">Boutique dedicada a la venta de ropa de mujer,  donde el diseño y la tendencia tienen un espacio. </p>
                 </div>
             </div>
         </div>
@@ -122,9 +122,9 @@
         </div>
             <div class="col-12 text-center copyright">
                 <ul class="m-0">
-                    <li class="textos-grises">&copy; 2021 Desarrollo por...</li>
-                    <li class="br-copy link-copy textos-cafes"><a class="textos-cafes" href="#"> &nbsp;Políticas de privacidad</a></li>
-                    <li class="link-copy textos-cafes"><a class="textos-cafes" href="#">Términos y Condiciones</a></li>
+                    <li class="textos-pagos" style="color:#938079 !important;">&copy; 2021 Desarrollo por...</li>
+                    <li class="br-copy link-copy textos-pagos"><a class="textos-cafes" href="#"> &nbsp;Políticas de privacidad</a></li>
+                    <li class="link-copy textos-pagos"><a class="textos-cafes" href="#">Términos y Condiciones</a></li>
                 </ul>
             </div>
         </footer>

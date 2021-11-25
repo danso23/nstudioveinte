@@ -133,7 +133,7 @@
                         </table>
 						<div class="form-group">
 							<label for="color" class="textos-cafes">Color</label>
-							<input type="text" name="color" id="color" class="form-control" required>
+							<input type="text" name="color" id="color" class="form-control textos-small" required>
 						</div>
 						<div class="form-group">
 							<label for="categoria" class="textos-cafes">Categoría</label>

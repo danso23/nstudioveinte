@@ -13,19 +13,19 @@
                     </div>
                 @endif
                 <div class="row justify-content-center product">
-                    <div class="col-9 col-sm-6 col-md-3 img-desc">
+                    <div class="col-12 col-sm-12 col-md-7 img-desc">
                         <img src="{{ asset('public/img/productos') }}/{{ $datos['productos']->url_imagen }}" alt="" class="mx-auto d-block">
                     </div>
-                    <div class="col-12 col-md-9 option-product">
-                        <h4 class="txt-cafe-cursivas">{{ $datos['productos']->nombre_producto }}</h4>
-                        <span class="textos-grises">${{ $datos['productos']->precio }}</span>
-                        <p class="textos-grises">
+                    <div class="col-12 col-md-5 option-product">
+                        <h4 class="txt-cafe">{{ $datos['productos']->nombre_producto }}</h4>
+                        <span class="textos-small-pink">${{ $datos['productos']->precio }}</span>
+                        <p class="textos-small">
                         {{$datos['productos']->desc_producto }}
                         </p>
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-5">
                                 <div class="form-group col-12 col-md-11 p-md-0">
-                                    <select id="inputState" class="form-control">
+                                    <select id="inputState" class="form-control textos-small">
                                         <option selected>Color</option>
                                         <option>...</option>
                                     </select>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
                                 <div class="form-group col-12 col-md-12">
-                                    <select id="inputState" class="form-control">
+                                    <select id="inputState" class="form-control textos-small">
                                         <option selected>Talla</option>
                                         <option value="S">S</option>
                                         <option value="M">M</option>
@@ -44,7 +44,7 @@
                         </div>
                         <form action="{{ route('cart.add') }}" method="post">
                             @csrf
-                            <button type="submit" class="btn btn-danger btn-add-sp btn-cafe">Añadir al carrito</button>
+                            <button type="submit" class="btn btn-danger btn-add-sp btn-pink">Añadir al carrito</button>
                             <input type="hidden" name="id_producto" value="{{ $datos['productos']->id_producto }}">
                         </form>
                     </div>
@@ -54,8 +54,8 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-3">
                         <div class="col-12 info-2 d-none d-md-block" style="background-color: #B97232 !important;">
-                            <p>Envíos gratuitos en compras superiores a $999</p><br>
-                            <p>Debido a las medidas actuales para proteger la seguridad de los empleados de nuestro centro de distribución con motivos del COVID-19, las entregas pueden presentar un retraso. Puedes consultar el estatus de tu pedido <a href="#" class="textos-cafes">aquí</a>.</p>
+                            <p class="textos-blancos">Envíos gratuitos en compras superiores a $999</p><br>
+                            <p class="textos-blancos">Debido a las medidas actuales para proteger la seguridad de los empleados de nuestro centro de distribución con motivos del COVID-19, las entregas pueden presentar un retraso. Puedes consultar el estatus de tu pedido <a href="#" class="textos-small">aquí</a>.</p>
                         </div>
                     </div>
                     <div id="detalles" class="col-12 col-md-9 info-details">
@@ -90,8 +90,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p class="textos-grises">-Medidas mostradas en cm.</p>
-                        <p class="textos-grises">-Las medidas mostradas en la tabla fueron obtenidas directamente de la prenda, puede existir una variación de + - 2cm. Se recomienda dejar por lo menos 1 cm de holguera en contorno de busto.</p>
+                        <p class="textos-small">-Medidas mostradas en cm.</p>
+                        <p class="textos-small">-Las medidas mostradas en la tabla fueron obtenidas directamente de la prenda, puede existir una variación de + - 2cm. Se recomienda dejar por lo menos 1 cm de holguera en contorno de busto.</p>
                     </div>
                 </div>
             </div>
