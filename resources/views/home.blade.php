@@ -80,17 +80,18 @@
                 <div class="col-lg-6 col-s-12">
                     <div class="col-s-12 vendido01" style="text-align: left;float: left;width: 100%;">
                         <div style="background-color:#E6C8BD; width: 30%; height:310px; padding-top:100px;float:right">
-                        <p class="txt-cafe-cursivas" style="text-align: left; padding-left:8px">Conjunto azul y blanco</p>
+                        <p class="txt-cafe" style="text-align: left; padding-left:8px">Conjunto azul y blanco</p>
+                        <p class="p-3 text-light text-right texto-precio fa-2x">$950</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-s-12 text-center">
                     <img src="{{ asset('public/img/productos/vendido02.png') }}" alt="index.php" width="100%">
-                    <p class="txt-cafe-cursivas" style="text-align: left;">Vestido rosado</p>
+                    <p class="txt-cafe text-left">Vestido rosado <span class="text-pink texto-precio ">$950</span></p>
                 </div>
                 <div class="col-lg-3 col-s-12 text-center">
                     <img src="{{ asset('public/img/productos/vendido03.png') }}" alt="index.php" width="100%">
-                    <p class="txt-cafe-cursivas" style="text-align: left;">Sandalias negras</p>
+                    <p class="txt-cafe" style="text-align: left;">Sandalias negras <span class="text-pink texto-precio">$950</span></p>
                 </div>
             </div>
         </div>
