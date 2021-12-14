@@ -71,8 +71,8 @@
                 <div class="col-lg-6 col-s-6">
                     <p class="text-left txt-cafe-cursivas">Más vendidos</p>
                 </div>
-                <div class="col-lg-6 col-s-6 text-right">
-                    <a class="btn btn-pink" href="{{ url('/categoria/1') }}">IR A TIENDA</a>
+                <div class="col-lg-6 col-s-6 text-right" id="divTienda">
+                    <a id="divTienda" class="btn btn-pink" href="{{ url('/categoria/1') }}">IR A TIENDA</a>
                 </div>
             </div>
         </div>
