@@ -64,3 +64,6 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::get('/historia', 'ProductoController@historia')->name('historia');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
