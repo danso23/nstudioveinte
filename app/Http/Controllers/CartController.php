@@ -7,6 +7,7 @@ Use Cart;
 use App\Models\ProductoModel;
 use App\Models\CategoriaModel;
 use App\Http\Controllers\UtilsController AS Utils;
+use Illuminate\Support\Facades\Auth;
 use Hamcrest\Util;
 
 class CartController extends Controller{
@@ -47,6 +48,7 @@ class CartController extends Controller{
 
     public function guardaEnvio(Request $request){
         $categorias = CategoriaModel::where('activo', '1')->selectRaw('id_categoria, nombre_categoria')->get();
+        $user = Auth::user();
         $datos = array(
             'pais'      => $request->pais,
             'estado'    => $request->estado,
@@ -54,6 +56,11 @@ class CartController extends Controller{
             'cp'        => $request->codigoPostal,
             'categorias' => $categorias
         );
-        return view('payment.payment')->with('datos', $datos);
+        if($user == null){
+            return redirect('/login');
+        }
+        else{
+            return view('payment.payment')->with('datos', $datos);
+        }
     }
 }
