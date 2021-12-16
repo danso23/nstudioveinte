@@ -52,6 +52,13 @@
                     </a>
                     <ul class="menu-right m-0">
                         <li>
+                            @if (Auth::guest())
+                                <a class="btn sesion" href="{{ url('/login') }}"><i class="far fa-user" aria-hidden="true"></i> </a>
+                            @else
+                                <a class="btn sesion" href="{{ url('/logout') }}"><i class="fa fa-user fa-1x"></i></a>
+                            @endif
+                        </li>
+                        <li>
                             <a href="#" class="icon-search" data-toggle="modal" data-target="#exampleModal">
                                 <img src="{{ asset('public/icons/busqueda.svg') }}" alt="Busqueda">
                             </a>

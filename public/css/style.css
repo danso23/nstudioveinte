@@ -1529,3 +1529,9 @@ input[type=number] { -moz-appearance:textfield; }
   text-decoration: underline;
 }
 
+.sesion{
+  padding: 0;
+}
+a{
+  color: #bd7b3e !important;
+}
